@@ -1,99 +1,15 @@
-# Line Drawing Guided Progressive Inpainting of Mural Damages - MuralNet
+# MuralXConv
 
-This is the source code for 'Line Drawing Guided Progressive Inpainting of Mural Damages'. We provide the code, the dataset, and the pretrained models. For convienence of introduction, we name the proposed network as MuralNet.
+## System Architecture
+### Overview
+![system-arch](./readme-figures/arch.jpg)
 
-## Abstract:
-Mural image inpainting refers to repairing the damage or missing areas in a mural image to restore the visual appearance. Most existing image-inpainting methods tend to take a target image as the only input and directly repair the damage to generate a visually plausible result. These methods obtain high performance in restoration or completion of some specific objects, e.g., human face, fabric texture, and printed texts, etc., however, are not suitable for repairing murals with varied subjects, especially for murals with large damaged areas. Moreover, due to the discrete colors in paints, mural inpainting may suffer from apparent color bias as compared to natural image inpainting. To this end, in this paper, we propose a line drawing guided progressive mural inpainting method. It divides the inpainting process into two steps: structure reconstruction and color correction, executed by a structure reconstruction network (SRN) and a color correction network (CCN), respectively. In the structure reconstruction, line drawings are used by SRN as a guarantee for large-scale content authenticity and structural stability. In the color correction, CCN operates a local color adjustment for missing pixels which reduces the negative effects of color bias and edge jumping. The proposed approach is evaluated against the current state-of-the-art image inpainting methods. Qualitative and quantitative results demonstrate the superiority of the proposed method in mural image inpainting. 
+### Caption Generation Module
+In the Damage Detection \& Description Generation module, we employ BLIP-2, a vision-language model, to analyze input images and generate damage-aware textual descriptions. Given a damaged mural image from the MuralDH dataset, BLIP-2 processes visual features to identify missing or deteriorated regions and formulates a structured textual representation of the damage. The model captures fine-grained details such as the extent of cracks, the loss of specific artistic elements, and degradation patterns. For instance, a generated description might state: "The central figure's face is partially missing, with damage to the left eye and nose. The surrounding floral patterns are faded, and cracks extend across the top right corner." By explicitly outlining damaged regions, this text serves as essential guidance for the inpainting process, allowing the restoration model to reconstruct missing details with greater contextual awareness.  
+### Mural Inpainting Module
+The Text-Guided Image Inpainting module utilizes a convolutional neural network (CNN) as generator, that synthesizes missing mural elements based on both visual and linguistic inputs. Inspired by, given the excellence of text guidance in the field of image inpainting. The model takes as input the damaged image alongside the textual damage description and integrates them to infer the missing content. To integrate textual guidance into the visual restoration process, we employ CLIP (Contrastive Language-Image Pretraining) to encode the input text into a semantic feature representation. A linear projection layer is then utilized to map the extracted textual features into the CNN feature space, enabling effective fusion of linguistic information with spatial image features. This approach ensures that the generated content accurately reconstructs the missing details while preserving semantic consistency.
+### Color Recorrection Module
+However, these efforts were not sufficient, as we observed that while the generated missing parts aligned well with the original artwork in terms of content, they still exhibited noticeable deviations in color. Therefore, a color correction network refines the output by adjusting the restored region’s texture, tone, and pigment distribution, ensuring a seamless blend with the undamaged portions of the mural. This additional refinement step is crucial for maintaining the mural’s artistic consistency and historical authenticity, preventing color mismatches or stylistic deviations that could arise from pure data-driven inpainting
+### Discriminator Module
 
--Mural image inpainting, -Mural damage repair, -Line drawing guided image inpainting
-
-## Mural Inpainting with and without line drawings
-![image](https://github.com/qinnzou/mural-image-inpainting/blob/main/other/intro2.jpg)
-
-## Network Architecture
-![image](https://github.com/qinnzou/mural-image-inpainting/blob/main/other/net.jpg)
-
-
-## Set up:
-### Requirments
-- Python 3.7
-- PyTorch 1.6
-- We run the codes on NVIDIA GPU RTX2080ti with CUDA 10.2 and cuDNN 7.6.5
-
-## Preparation:
-### Data Preparation
-![image](https://github.com/qinnzou/mural-image-inpainting/blob/main/other/examples.jpg)
-We collected a mural dataset DhMural1714 to train and test the MuralNet. You can download them and put them into "./dataset/".
-
-### Pretrained Models
-Our model is trained on DhMural1714, the trained model can be obtained at `./checkpoints/InpaintingModel_gen.pth` and `./checkpoints/InpaintingModel_dis.pth`
-
-
-## Download:
-### DhMural1714 Dataset
-In our research, we collected some replicas of murals by artists in addition to the real mural paintings. The real mural paintings are captured by digital cameras, while the replicas of murals are obtained by scanning the album. A total of 1,714 images are collected. Among them, there are 525 real murals and 1,189 replicas.
-
-dataset: https://1drv.ms/u/s!AittnGm6vRKLzXorf1nkiDPRQB4D?e=Avv27i
-
-You can also download the dataset from  
-Link: https://pan.baidu.com/s/13dkh4zX3C4_z2W3Kigg6uQ 
-passcodes: 0vlr
-
-
-### Models
-
-Models：https://1drv.ms/u/s!AittnGm6vRKLzXs3EtzJHBXK8U-K?e=waOiUy
-
-You can also download the trained models from  
-link: https://pan.baidu.com/s/1EKvTAHyOaMbL9s7aqdZEfw 
-passcodes: vg5v
-
-
-## Training:
-
-MuralNet is trained on two stages: 1) training the coarse network, 2) training the whole model. 
-
-To train the model, modify the training parameters in `checkpoints/config.yml`.
-
-Run the code for training:
-```bash
-python train.py
-```
-
-## Test:
-We provide several example images in `checkpoints/test` for testing, just run the code:
-```bash
-python test.py
-```
-Directory of testing images can be modified in `main.py`, the network requires the input images, the corresponding line drawings, and the masks for inpainting.
-
-![image](https://github.com/qinnzou/mural-image-inpainting/blob/main/other/results.jpg)
-
-## Evaluation:
-To evaluate the performance, run the code:
-```bash
-python eval_mix.py
-```
-
-## Citation:
-
-```bash
-@article{muralnet2022,
-  title={Line Drawing Guided Progressive Inpainting of Mural Damages},
-  author={Luxi Li and Qin Zou and Fan Zhang and Hongkai Yu and Long Chen and Chengfang Song and Xianfeng Huang and Xiaoguang Wang},
-  journal={ArXiv 2211.06649},
-  pages={1--12},
-  year={2022},
-}
-```
-
-## Acknowledgment:
-We implement our method by referring to the structure of [EdgeConnect](https://github.com/knazeri/edge-connect). We thank the authors of the EdgeConnect paper. If you use this code in your work, you should also cite the EdgeConnect paper.
-```bash
-@inproceedings{nazeri2019edgeconnect,
-  title={EdgeConnect: Generative Image Inpainting with Adversarial Edge Learning},
-  author={Nazeri, Kamyar and Ng, Eric and Joseph, Tony and Qureshi, Faisal and Ebrahimi, Mehran},
-  journal={arXiv preprint},
-  year={2019},
-}
-```
+## Reference
