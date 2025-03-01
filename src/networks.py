@@ -202,6 +202,65 @@ class Self_Attn(nn.Module):
         else:
             return out
 
+
+class Cross_Attn(nn.Module):
+    """ Cross Attention Layer """
+    def __init__(self, in_dim, ref_dim, activation, with_attn=False):
+        super(Cross_Attn, self).__init__()
+        self.chanel_in = in_dim
+        self.activation = activation
+        self.with_attn = with_attn
+
+        # Query is extracted from input feature x
+        self.query_conv = nn.Conv2d(in_channels=in_dim, out_channels=in_dim // 8, kernel_size=1)
+
+        # Key and Value are extracted from reference feature 'ref'
+        self.key_conv = nn.Conv2d(in_channels=ref_dim, out_channels=in_dim // 8, kernel_size=1)
+        self.value_conv = nn.Conv2d(in_channels=ref_dim, out_channels=in_dim, kernel_size=1)
+
+        # Learnable weight gamma
+        self.gamma = nn.Parameter(torch.zeros(1))
+
+        self.softmax = nn.Softmax(dim=-1)
+
+    def forward(self, x, ref):
+        """
+        Inputs:
+            x : image feature (B X C X W X H) -> image feature from CNN
+            ref : reference feature (B X C_ref X W_ref X H_ref) -> Text feature from CLIP
+        Outputs:
+            out : feature map after cross attention
+            attention : attention weights (optional)
+        """
+        m_batchsize, C, width, height = x.size()
+        _, C_ref, width_ref, height_ref = ref.size()
+
+        # calculate query, input x
+        proj_query = self.query_conv(x).view(m_batchsize, -1, width * height).permute(0, 2, 1)  # B X N X C
+
+        # calculate key, input ref
+        proj_key = self.key_conv(ref).view(m_batchsize, -1, width_ref * height_ref)  # B X C X N_ref
+
+        # calculate attention weights
+        energy = torch.bmm(proj_query, proj_key)  # B X N X N_ref
+        attention = self.softmax(energy)
+
+        # calculate Value，input ref
+        proj_value = self.value_conv(ref).view(m_batchsize, -1, width_ref * height_ref)  # B X C X N_ref
+
+        # calculate weighted feature
+        out = torch.bmm(proj_value, attention.permute(0, 2, 1))  # B X C X N
+        out = out.view(m_batchsize, C, width, height)  # Restore original dimensions
+
+        # combine input feature
+        out = self.gamma * out + x
+
+        if self.with_attn:
+            return out, attention
+        else:
+            return out
+
+
 # class InpaintFineGenerator(BaseNetwork):
 #     def __init__(self, residual_blocks=8, init_weights=True):
 #         super(InpaintFineGenerator, self).__init__()
