@@ -84,12 +84,12 @@ class MuralNet():
             for items in train_loader:
                 self.inpaint_model.train()
 
-                images, images_gray, edges, masks = self.cuda(*items)
+                images, images_gray, text_feat, masks = self.cuda(*items)
                 print(type(images))
 
                 # inpaint model
                 # train
-                outputs, gen_loss, dis_loss, logs = self.inpaint_model.process(images, edges, masks)
+                outputs, gen_loss, dis_loss, logs = self.inpaint_model.process(images, masks, text_feat)
                 outputs_merged = (outputs * masks) + (images * (1 - masks))
 
                 # metrics
@@ -149,11 +149,11 @@ class MuralNet():
 
         for items in val_loader:
             iteration += 1
-            images, images_gray, edges, masks = self.cuda(*items)
+            images, images_gray, text_feat, masks = self.cuda(*items)
 
             # inpaint model
             # eval
-            outputs, gen_loss, dis_loss, logs = self.inpaint_model.process(images, edges, masks)
+            outputs, gen_loss, dis_loss, logs = self.inpaint_model.process(images, masks, text_feat)
             outputs_merged = (outputs * masks) + (images * (1 - masks))
 
             # metrics
@@ -177,13 +177,13 @@ class MuralNet():
         index = 0
         for items in test_loader:
             name = self.test_dataset.load_name(index)
-            images, images_gray, edges, masks = self.cuda(*items)
+            images, images_gray, text_feat, masks = self.cuda(*items)
             index += 1
 
             mask1 = masks
             images1 = images
 
-            outputs1, outputs2 = self.inpaint_model(images, edges, masks, returnInput=False,coarseOnly=False)
+            outputs1, outputs2 = self.inpaint_model(images, masks, text_feat, returnInput=False,coarseOnly=False)
 
             outputs_merged = (outputs2 * mask1) + (images1 * (1 - mask1))
 
@@ -194,13 +194,13 @@ class MuralNet():
 
             imsave(output_merged, path_merged)
 
-            if self.debug:
-                edges = self.postprocess(1 - edges)[0]
-                masked = self.postprocess(images * (1 - masks) + masks)[0]
-                fname, fext = name.split('.')
-
-                imsave(edges, os.path.join(self.merged_results_path, fname + '_edge.' + fext))
-                imsave(masked, os.path.join(self.merged_results_path, fname + '_masked.' + fext))
+            # if self.debug:
+            #     edges = self.postprocess(1 - edges)[0]
+            #     masked = self.postprocess(images * (1 - masks) + masks)[0]
+            #     fname, fext = name.split('.')
+            #
+            #     imsave(edges, os.path.join(self.merged_results_path, fname + '_edge.' + fext))
+            #     imsave(masked, os.path.join(self.merged_results_path, fname + '_masked.' + fext))
 
         if index == 0:
             print("check the test folder to make sure the folder is not none")
@@ -215,7 +215,7 @@ class MuralNet():
 
         model = self.config.MODEL
         items = next(self.sample_iterator)
-        images, images_gray, edges, masks = self.cuda(*items)
+        images, images_gray, text_feat, masks = self.cuda(*items)
 
 
         # inpaint model
@@ -224,7 +224,7 @@ class MuralNet():
         if iteration<self.config.COARSE_ITERS:
             coarseonly=True
         inputs = (images * (1 - masks)) + masks
-        coarse, outputs, inputs2 = self.inpaint_model(images, edges, masks, returnInput=True,coarseOnly=coarseonly)
+        coarse, outputs, inputs2 = self.inpaint_model(images, text_feat, masks, returnInput=True,coarseOnly=coarseonly)
         outputs_merged = (outputs * masks) + (images * (1 - masks))
 
         if it is not None:
@@ -237,7 +237,7 @@ class MuralNet():
         images = stitch_images(
             self.postprocess(images),
             self.postprocess(inputs),
-            self.postprocess(edges),
+            # self.postprocess(edges),
             self.postprocess(coarse),
             self.postprocess(inputs2),
             self.postprocess(outputs),
