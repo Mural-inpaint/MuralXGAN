@@ -14,10 +14,17 @@ However, these efforts were not sufficient, as we observed that while the genera
 The discriminator acts as a binary classifier that distinguishes between real and generated (fake) data. Its primary role is to evaluate whether a given input comes from the true data distribution or is artificially created by the generator. During training, the discriminator learns to maximize its accuracy by improving its ability to differentiate real samples from fake ones. Simultaneously, the generator aims to fool the discriminator by producing increasingly realistic samples. This adversarial process helps the generator refine its output until it generates data that closely resemble real samples, ultimately improving the overall performance of the GAN.
 
 ## Documentation
+### System Arch
+![code-arch](./readme-figures/system_arch.jpg)
 ### Installation
 ```aiignore
 conda create -n mural-inpaint python=3.12.8 -y
 conda activate mural-inpaint
 pip install -r requirements.txt
 ```
+### Usage
+1. `python scripts/flist.py`
+2. Replace `FLIST` path in `./checkpoints/config.yml`
+
+
 ## Reference

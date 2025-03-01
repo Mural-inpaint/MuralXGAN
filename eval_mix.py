@@ -1,6 +1,6 @@
 import os
 import cv2
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity as compare_ssim
 import torch
 import numpy as np
 import lpips

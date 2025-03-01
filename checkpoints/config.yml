@@ -6,15 +6,16 @@ DEBUG: 0            # turns on debugging mode
 VERBOSE: 0          # turns on verbose mode in the output console
 MODELNAME: muralinpainting
 
-TRAIN_FLIST: /public/home/lucy/mural/dataset/flist/train/images.flist
+TRAIN_FLIST: /mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/train/images.flist
 VAL_FLIST: /public/home/lucy/mural/dataset/flist/val/images.flist
 TEST_FLIST: /public/home/lucy/mural/dataset/flist/val/images.flist
 
+# The EDGE_FLIST should be changed to TRAIN_CAPTION_FLIST
 TRAIN_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/train/edges.flist
 VAL_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
 TEST_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
 
-TRAIN_MASK_FLIST: /public/home/lucy/mural/dataset/flist/train/masks.flist
+TRAIN_MASK_FLIST: /mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/train/labels.flist
 VAL_MASK_FLIST: /public/home/lucy/mural/dataset/flist/val/masks.flist
 TEST_MASK_FLIST: /public/home/lucy/mural/dataset/flist/val/masks.flist
 
