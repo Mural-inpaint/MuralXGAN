@@ -1,32 +1,19 @@
-from openai import OpenAI
-import base64
-
-# TODO: Config env variable -> export OPENAI_API_KEY=
-client = OpenAI()
-
-def encode_image(image_path):
-    """ Translate image to base64 """
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode("utf-8")
+import torch
+from sentence_transformers import SentenceTransformer, util
+from torch.xpu import device
 
 
-def analyze_image(image_path):
-    base64_image = encode_image(image_path)
+def feature_map(caption: str):
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = SentenceTransformer('clip-ViT-B-32').to(device)
 
-    response = client.chat.completions.create(
-        model="gpt-4.5-preview",
-        messages=[
-            {"role": "system", "content": "You are an Mural expert to analyze damage region of the mural painting"},
-            {"role": "user", "content": [
-                {"type": "text", "text": "Analyze this image damage region and describe its contents:"},
-                {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{base64_image}"}}
-            ]}
-        ],
-    )
+    with torch.no_grad():
+        text_feat = model.encode(caption, convert_to_tensor=True).to(device)
+        text_feat = text_feat/text_feat.norm(dim=-1, keepdim=True)
 
-    return response.choices[0]
+    return text_feat
 
-image_path = "checkpoints/test.png"
-result = analyze_image(image_path)
-print(result)
-
+# test
+caption="this image is highlighted in red overlay to indicate the affected areas."
+text_feat = feature_map(caption)
+print(text_feat.shape, text_feat)

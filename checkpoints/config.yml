@@ -11,9 +11,13 @@ VAL_FLIST: /public/home/lucy/mural/dataset/flist/val/images.flist
 TEST_FLIST: /public/home/lucy/mural/dataset/flist/val/images.flist
 
 # The EDGE_FLIST should be changed to TRAIN_CAPTION_FLIST
-TRAIN_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/train/edges.flist
-VAL_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
-TEST_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
+#TRAIN_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/train/edges.flist
+#VAL_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
+#TEST_EDGE_FLIST: /public/home/lucy/mural/dataset/flist/val/edges.flist
+
+TRAIN_CAPTION_FLIST: /mnt/d/
+VAL_CAPTION_FLIST: /public
+TEST_CAPTION_FLIST: /public
 
 TRAIN_MASK_FLIST: /mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/train/labels.flist
 VAL_MASK_FLIST: /public/home/lucy/mural/dataset/flist/val/masks.flist
