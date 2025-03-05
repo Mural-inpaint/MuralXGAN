@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 from .dataset import Dataset
 from .models import InpaintingModel
 from .utils import Progbar, create_dir, stitch_images, imsave
-from .metrics import PSNR, EdgeAccuracy
+from .metrics import PSNR
 
 
 class MuralNet():
@@ -17,26 +17,17 @@ class MuralNet():
         print("loading \""+model_name +'\" model')
         self.debug = False
         self.model_name = model_name
-        # self.edge_model = EdgeModel(config).to(config.DEVICE)
         self.inpaint_model = InpaintingModel(config)
         self.inpaint_model.to(config.DEVICE)
         self.psnr = PSNR(255.0).to(config.DEVICE)
-        self.edgeacc = EdgeAccuracy(config.EDGE_THRESHOLD).to(config.DEVICE)
-
-        # if len(config.GPU) > 1:
-        #     self.inpaint_model = nn.DataParallel(self.inpaint_model, config.GPU)
-        #     self.psnr = nn.DataParallel(self.psnr, config.GPU)
-        #     self.edgeacc = nn.DataParallel(self.edgeacc, config.GPU)
-        # self.inpaint_model = nn.DataParallel(self.inpaint_model)
-        # self.inpaint_model = self.inpaint_model.cuda()
 
         print(str(self.config.MODE))
         # test mode
         if self.config.MODE == 2:
-            self.test_dataset = Dataset(config, config.TEST_FLIST, config.TEST_EDGE_FLIST, config.TEST_MASK_FLIST, augment=False, training=False)
+            self.test_dataset = Dataset(config, config.TEST_FLIST, config.TEST_MASK_FLIST, config.TEST_CAPTIONS, augment=False, training=False)
         else:
-            self.train_dataset = Dataset(config, config.TRAIN_FLIST, config.TRAIN_EDGE_FLIST, config.TRAIN_MASK_FLIST, augment=True, training=True)
-            self.val_dataset = Dataset(config, config.VAL_FLIST, config.VAL_EDGE_FLIST, config.VAL_MASK_FLIST, augment=False, training=True)
+            self.train_dataset = Dataset(config, config.TRAIN_FLIST, config.TRAIN_MASK_FLIST, config.TRAIN_CAPTIONS, augment=True, training=True)
+            self.val_dataset = Dataset(config, config.VAL_FLIST, config.VAL_MASK_FLIST, config.VAL_CAPTIONS, augment=False, training=True)
             self.sample_iterator = self.val_dataset.create_iterator(config.SAMPLE_SIZE)
 
         self.samples_path = os.path.join(config.PATH, 'samples')
@@ -84,7 +75,7 @@ class MuralNet():
             for items in train_loader:
                 self.inpaint_model.train()
 
-                images, images_gray, text_feat, masks = self.cuda(*items)
+                images, images_gray, masks, text_feat = self.cuda(*items)
                 print(type(images))
 
                 # inpaint model
@@ -149,7 +140,7 @@ class MuralNet():
 
         for items in val_loader:
             iteration += 1
-            images, images_gray, text_feat, masks = self.cuda(*items)
+            images, images_gray, masks, text_feat = self.cuda(*items)
 
             # inpaint model
             # eval
@@ -177,7 +168,7 @@ class MuralNet():
         index = 0
         for items in test_loader:
             name = self.test_dataset.load_name(index)
-            images, images_gray, text_feat, masks = self.cuda(*items)
+            images, images_gray, masks, text_feat = self.cuda(*items)
             index += 1
 
             mask1 = masks
@@ -215,7 +206,7 @@ class MuralNet():
 
         model = self.config.MODEL
         items = next(self.sample_iterator)
-        images, images_gray, text_feat, masks = self.cuda(*items)
+        images, images_gray, masks, text_feat = self.cuda(*items)
 
 
         # inpaint model
@@ -224,7 +215,7 @@ class MuralNet():
         if iteration<self.config.COARSE_ITERS:
             coarseonly=True
         inputs = (images * (1 - masks)) + masks
-        coarse, outputs, inputs2 = self.inpaint_model(images, text_feat, masks, returnInput=True,coarseOnly=coarseonly)
+        coarse, outputs, inputs2 = self.inpaint_model(images, masks, text_feat, returnInput=True, coarseOnly=coarseonly)
         outputs_merged = (outputs * masks) + (images * (1 - masks))
 
         if it is not None:

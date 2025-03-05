@@ -1,5 +1,7 @@
 from openai import OpenAI
 import base64
+import yaml
+import os
 
 # TODO: Config env variable -> export OPENAI_API_KEY=
 client = OpenAI()
@@ -24,9 +26,34 @@ def analyze_image(image_path):
         ],
     )
 
-    return response.choices[0]
+    return response.choices[0].message.content
 
-image_path = "checkpoints/test.png"
-result = analyze_image(image_path)
-print(result)
+config_path = "checkpoints/config.yml"
+with open(config_path, "r") as f:
+    config = yaml.safe_load(f)
+
+flist_path = config.get("TRAIN_OVERLAY_FLIST")
+
+with open(flist_path, "r") as f:
+    image_paths = [line.strip() for line in f.readlines()]
+
+caption_save_path = "checkpoints/captions.yml"
+if os.path.exists(caption_save_path):
+    with open(caption_save_path, "r") as f:
+        captions = yaml.safe_load(f) or {}
+else:
+    captions = {}
+
+for image_path in image_paths:
+    if image_path in captions:
+        print(f"Skipping {image_path}, already processed.")
+        continue
+
+    result = analyze_image(image_path)
+    captions[image_path] = result
+
+    with open(caption_save_path, "w") as f:
+        yaml.dump(captions, f, default_flow_style=False)
+
+    print(f"Saved caption for {image_path}")
 

@@ -11,8 +11,8 @@ parser.add_argument('--path', type=str, help='path to the dataset')
 parser.add_argument('--output', type=str, help='path to the file list')
 args = parser.parse_args()
 
-imgdir='/mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/train/labels'
-savedir='/mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/train/labels.flist'
+imgdir='/mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/test/images'
+savedir='/mnt/d/Edinburgh/MLP/MuralDH/Mural_seg/test/images.flist'
 
 ext = {'.JPG', '.JPEG', '.PNG', '.TIF', 'TIFF'}
 

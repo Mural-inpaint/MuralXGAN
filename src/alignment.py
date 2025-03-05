@@ -14,6 +14,6 @@ def feature_map(caption: str):
     return text_feat
 
 # test
-caption="this image is highlighted in red overlay to indicate the affected areas."
-text_feat = feature_map(caption)
-print(text_feat.shape, text_feat)
+# caption="this image is highlighted in red overlay to indicate the affected areas."
+# text_feat = feature_map(caption)
+# print(text_feat.shape, text_feat)
