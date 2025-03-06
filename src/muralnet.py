@@ -27,7 +27,9 @@ class MuralNet():
             self.test_dataset = Dataset(config, config.TEST_FLIST, config.TEST_MASK_FLIST, config.TEST_CAPTIONS, augment=False, training=False)
         else:
             self.train_dataset = Dataset(config, config.TRAIN_FLIST, config.TRAIN_MASK_FLIST, config.TRAIN_CAPTIONS, augment=True, training=True)
+            print(f"Training dataset size: {len(self.train_dataset)}")
             self.val_dataset = Dataset(config, config.VAL_FLIST, config.VAL_MASK_FLIST, config.VAL_CAPTIONS, augment=False, training=True)
+            print(f"Validation dataset size: {len(self.val_dataset)}")
             self.sample_iterator = self.val_dataset.create_iterator(config.SAMPLE_SIZE)
 
         self.samples_path = os.path.join(config.PATH, 'samples')
@@ -52,7 +54,7 @@ class MuralNet():
         train_loader = DataLoader(
             dataset=self.train_dataset,
             batch_size=self.config.BATCH_SIZE,
-            num_workers=4,
+            num_workers=0,
             drop_last=True,
             shuffle=True
         )
@@ -61,19 +63,20 @@ class MuralNet():
         keep_training = True
         max_iteration = int(float((self.config.MAX_ITERS)))
         total = len(self.train_dataset)
+        train_loader_checker = len(train_loader)
 
-        if total == 0:
+        if total == 0 or train_loader_checker == 0:
             print('No training data was provided! Check \'TRAIN_FLIST\' value in the configuration file.')
             return
 
         while(keep_training):
             epoch += 1
-            print('\n\nTraining epoch: %d' % epoch)
+            print('\nTraining epoch: %d' % epoch)
 
             progbar = Progbar(total, width=20, stateful_metrics=['epoch', 'iter'])
 
             for items in train_loader:
-                self.inpaint_model.train()
+                # self.inpaint_model.train()
 
                 images, images_gray, masks, text_feat = self.cuda(*items)
                 print(type(images))

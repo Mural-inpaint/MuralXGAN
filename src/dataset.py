@@ -19,17 +19,22 @@ from imageio import imread
 from skimage.feature import canny
 from skimage.color import rgb2gray, gray2rgb
 from .utils import create_mask
-from .alignment import feature_map
+from sentence_transformers import SentenceTransformer
 
 
 class Dataset(torch.utils.data.Dataset):
-    def __init__(self, config, flist, mask_flist, caption, augment=True, training=True):
+    def __init__(self, config, flist, mask_flist, caption, model=None, augment=True, training=True):
         super(Dataset, self).__init__()
         self.augment = augment
         self.training = training
         self.data = self.load_flist(flist)
         self.mask_data = self.load_flist(mask_flist)
         self.caption_data = self.load_caption(caption)
+        if model is None:
+            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            self.model = SentenceTransformer('clip-ViT-B-32').to(device)
+        else:
+            self.model = model
 
         self.input_size = config.INPUT_SIZE
         self.sigma = config.SIGMA
@@ -96,8 +101,9 @@ class Dataset(torch.utils.data.Dataset):
         mask = self.load_mask(img, index)
 
         caption = self.caption_data[index] if index < len(self.caption_data) else "No caption available"
-        text_feat = feature_map(caption)
-        print("===text_feat===\n", text_feat.shape, "\n===============")
+        with torch.no_grad():
+            text_feat = self.model.encode(caption, convert_to_tensor=True)
+            text_feat = text_feat / text_feat.norm(dim=-1, keepdim=True)
 
         # augment data
         if self.augment and np.random.binomial(1, 0.5) > 0:
@@ -151,9 +157,9 @@ class Dataset(torch.utils.data.Dataset):
         with open(caption_path, 'r', encoding='utf-8') as file:
             captions_dict = yaml.safe_load(file)
 
-        captions_list = [captions_dict.get(path, "No caption available") for path in self.data]
+        captions_list = list(captions_dict.values())
 
-        print("Caption loaded successfully.")
+        print(f"Captions loaded: {len(captions_list)} captions.")
         return captions_list
 
     def to_tensor(self, img):
@@ -193,7 +199,7 @@ class Dataset(torch.utils.data.Dataset):
 
             if os.path.isfile(flist):
                 try:
-                    return np.genfromtxt(flist, dtype=np.str, encoding='utf-8')
+                    return np.genfromtxt(flist, dtype=str, encoding='utf-8')
                 except:
                     return [flist]
 

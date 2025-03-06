@@ -2,13 +2,14 @@ import torch
 from sentence_transformers import SentenceTransformer, util
 from torch.xpu import device
 
+device = "cuda" if torch.cuda.is_available() else "cpu"
+MODEL = SentenceTransformer('clip-ViT-B-32').to(device)
 
 def feature_map(caption: str):
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = SentenceTransformer('clip-ViT-B-32').to(device)
+    global MODEL
 
     with torch.no_grad():
-        text_feat = model.encode(caption, convert_to_tensor=True).to(device)
+        text_feat = MODEL.encode(caption, convert_to_tensor=True)
         text_feat = text_feat/text_feat.norm(dim=-1, keepdim=True)
 
     return text_feat

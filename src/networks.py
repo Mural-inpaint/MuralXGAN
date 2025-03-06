@@ -321,7 +321,7 @@ class InpaintCoarseNet(nn.Module):
         super(InpaintCoarseNet, self).__init__()
 
         self.res_blocks = residual_blocks
-        self.cross_attn = Cross_Attn(in_dim = 256, text_dim = 256, activation = nn.ReLU(), with_attn=True)
+        self.cross_attn = Cross_Attn(in_dim = 256, text_dim = 512, activation = nn.ReLU(), with_attn=True)
 
         self.pad1 = nn.ReflectionPad2d(3)
         self.pConv1_1 = nn.Conv2d(in_channels=4, out_channels=32, kernel_size=7, padding=0)
@@ -392,6 +392,8 @@ class InpaintCoarseNet(nn.Module):
         x = self.block4(x)
 
         x = self.cross_attn(x, text_feat)
+        if isinstance(x, tuple):
+            x = x[0]
 
         x = self.conv0_5(x)
         x = self.norm0_5(x)
