@@ -30,7 +30,7 @@ def overlay_mask_on_image(original_path, mask_path, color=(255, 0, 0), alpha=180
     return composite_rgb
 
 # Example usage
-config_path = "checkpoints/config.yml"
+config_path = "../checkpoints/config.yml"
 with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 

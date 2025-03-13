@@ -84,7 +84,6 @@ class Dataset(torch.utils.data.Dataset):
         # else:
         #     img = cv2.resize(img, (int(img.shape[0]) , int(img.shape[1])), interpolation=cv2.INTER_AREA)
 
-
        # gray to rgb
         if len(img.shape) < 3:
             img = gray2rgb(img)
@@ -99,6 +98,9 @@ class Dataset(torch.utils.data.Dataset):
 
         # load mask
         mask = self.load_mask(img, index)
+
+        if mask.shape == (512, 512, 3):
+            mask = rgb2gray(mask)
 
         caption = self.caption_data[index] if index < len(self.caption_data) else "No caption available"
         with torch.no_grad():
