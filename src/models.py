@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from .networks import InpaintGenerator, Discriminator
-from .loss import AdversarialLoss, PerceptualLoss, StyleLoss, HistogramLoss
+from .loss import AdversarialLoss, PerceptualLoss, StyleLoss, HistogramLoss, VGG19
 
 
 class BaseModel(nn.Module):
@@ -116,6 +116,7 @@ class InpaintingModel(BaseModel):
         self.add_module('discriminator', discriminator)
         # self.add_module('refinediscriminator', refineDiscriminator)
 
+        self.add_module('vgg', VGG19())
         self.add_module('l1_loss', l1_loss)
         self.add_module('perceptual_loss', perceptual_loss)
         self.add_module('style_loss', style_loss)
@@ -134,7 +135,7 @@ class InpaintingModel(BaseModel):
             betas=(config.BETA1, config.BETA2)
         )
 
-    def process(self, images, edges, masks):
+    def process(self, images, masks, text_feat):
         self.iteration += 1
         coarseonly=False
 
@@ -146,7 +147,7 @@ class InpaintingModel(BaseModel):
         self.dis_optimizer.zero_grad()
 
         # process outputs
-        outputs1, outputs2= self(images, edges, masks,coarseOnly=coarseonly)
+        outputs1, outputs2= self(images,masks,text_feat,coarseOnly=coarseonly)
         outputs2_merged = (outputs2 * masks) + (images * (1 - masks))
 
         msk=masks[:,0,:,:]
@@ -183,8 +184,8 @@ class InpaintingModel(BaseModel):
             gen_loss += gen_content_loss
 
             # generator style loss
-            gen_style_loss = self.style_loss(outputs1, images )* self.config.STYLE_LOSS_WEIGHT
-            gen_loss += gen_style_loss
+            # gen_style_loss = self.style_loss(outputs1, images )* self.config.STYLE_LOSS_WEIGHT
+            # gen_loss += gen_style_loss
 
             # create logs
             if len(self.GPU) > 1:
@@ -192,7 +193,7 @@ class InpaintingModel(BaseModel):
                 gen_gan_loss = torch.mean(gen_gan_loss)
                 gen_l1_loss = torch.mean(gen_l1_loss)
                 gen_content_loss = torch.mean(gen_content_loss)
-                gen_style_loss = torch.mean(gen_style_loss)
+                # gen_style_loss = torch.mean(gen_style_loss)
                 gen_loss = torch.mean(gen_loss)
 
             logs = [
@@ -200,7 +201,7 @@ class InpaintingModel(BaseModel):
                 ("l_g2", gen_gan_loss.item()),
                 ("l_l1", gen_l1_loss.item()),
                 ("l_per", gen_content_loss.item()),
-                ("l_sty", gen_style_loss.item()),
+                # ("l_sty", gen_style_loss.item()),
             ]
             # generator histgramloss
             # gen_hist_loss = self.histogram_loss(outputs1*255, images*255)* self.config.HIST_LOSS_WEIGHT
@@ -291,14 +292,14 @@ class InpaintingModel(BaseModel):
 
         return outputs2, gen_loss, dis_loss, logs
 
-    def forward(self, images, edges, masks,returnInput=False,coarseOnly=False):#孔洞是1
+    def forward(self, images, masks, text_feat, returnInput=False, coarseOnly=False):#孔洞是1
         images_masked = (images * (1 - masks).float())
-        inputs = torch.cat((images_masked, edges), dim=1)
+        inputs = torch.cat((images_masked, masks), dim=1)
         if returnInput:
-            outputs1,outputs2,inputs2 = self.generator(inputs,masks,returnInput2=returnInput,coarseOnly=coarseOnly)                                 # in: [rgb(3) + edge(1)]
+            outputs1,outputs2,inputs2 = self.generator(inputs,masks,text_feat,returnInput2=returnInput,coarseOnly=coarseOnly)                                 # in: [rgb(3) + edge(1)]
             return outputs1, outputs2, inputs2
         else:
-            outputs1,outputs2 = self.generator(inputs,masks,returnInput2=returnInput,coarseOnly=coarseOnly)                                 # in: [rgb(3) + edge(1)]
+            outputs1,outputs2 = self.generator(inputs,masks,text_feat,returnInput2=returnInput,coarseOnly=coarseOnly)                                 # in: [rgb(3) + edge(1)]
             return outputs1,outputs2
 
     def backward(self, gen_loss=None, dis_loss=None):

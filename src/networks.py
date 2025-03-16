@@ -202,6 +202,64 @@ class Self_Attn(nn.Module):
         else:
             return out
 
+
+class Cross_Attn(nn.Module):
+    """ Cross Attention Layer """
+    def __init__(self, in_dim, text_dim, activation, with_attn=False):
+        super(Cross_Attn, self).__init__()
+        self.image_channels = in_dim
+        self.text_dim = text_dim
+        self.activation = activation
+        self.with_attn = with_attn
+
+        # query is from image feature
+        self.query_conv = nn.Conv2d(in_channels=in_dim, out_channels=in_dim // 8, kernel_size=1)
+        # Key & Value are from text feature, map to CNN dimension
+        self.key_fc = nn.Linear(text_dim, in_dim // 8)  # map text feature to Key
+        self.value_fc = nn.Linear(text_dim, in_dim)  # map text feature to Value
+
+        self.gamma = nn.Parameter(torch.zeros(1))  # Learnable param, adjust the impact of attention
+        self.softmax = nn.Softmax(dim=-1)
+
+    def forward(self, x, text_feat):
+        """
+        Inputs:
+            x : image feature  (B, C, W, H)
+            text_feat : text feature (B, text_dim)
+        Outputs:
+            out : combined feature map after cross attention
+            attention : attention weights (optional)
+        """
+        B, C, W, H = x.size()
+
+        # Query - image feature
+        proj_query = self.query_conv(x).view(B, -1, W * H).permute(0, 2, 1)  # (B, N, C//8), N=W*H
+
+        # Key & Value - text feature
+        proj_key = self.key_fc(text_feat).unsqueeze(1)  # (B, 1, C//8)
+        proj_value = self.value_fc(text_feat).unsqueeze(1)  # (B, 1, C)
+
+        # calculate attention weights
+        energy = torch.bmm(proj_query, proj_key.transpose(1, 2))  # (B, N, 1)
+        attention = self.softmax(energy)
+
+        # calculate attention weighted Value
+        out = proj_value.expand(-1, W * H, -1) * attention  # (B, N, C)
+
+        # TODO: Self_Attn does not use activation, only initialize it.
+        out = self.activation(out)
+
+        out = out.permute(0, 2, 1).view(B, C, W, H)  # transformed back to (B, C, W, H)
+
+        # res connection + gamma
+        out = self.gamma * out + x
+
+        if self.with_attn:
+            return out, attention
+        else:
+            return out
+
+
 # class InpaintFineGenerator(BaseNetwork):
 #     def __init__(self, residual_blocks=8, init_weights=True):
 #         super(InpaintFineGenerator, self).__init__()
@@ -263,6 +321,7 @@ class InpaintCoarseNet(nn.Module):
         super(InpaintCoarseNet, self).__init__()
 
         self.res_blocks = residual_blocks
+        self.cross_attn = Cross_Attn(in_dim = 256, text_dim = 512, activation = nn.ReLU(), with_attn=True)
 
         self.pad1 = nn.ReflectionPad2d(3)
         self.pConv1_1 = nn.Conv2d(in_channels=4, out_channels=32, kernel_size=7, padding=0)
@@ -306,7 +365,7 @@ class InpaintCoarseNet(nn.Module):
         self.conv3_2 = nn.Conv2d(in_channels=16, out_channels=3, kernel_size=7, padding=0)
 
 
-    def forward(self, x):
+    def forward(self, x, text_feat):
         x = self.pad1(x)
         x = self.pConv1_1(x)
         x = self.pnorm1_1(x)
@@ -331,6 +390,10 @@ class InpaintCoarseNet(nn.Module):
         x = self.block2(x)
         x = self.block3(x)
         x = self.block4(x)
+
+        x = self.cross_attn(x, text_feat)
+        if isinstance(x, tuple):
+            x = x[0]
 
         x = self.conv0_5(x)
         x = self.norm0_5(x)
@@ -489,12 +552,12 @@ class InpaintGenerator(BaseNetwork):
         if init_weights:
             self.init_weights()
 
-    def forward(self, x,masks,returnInput2=False,coarseOnly=False):
+    def forward(self, x, masks, text_feat, returnInput2=False, coarseOnly=False):
         x0=x[:,:-1,:,:]
 
         # x = F.interpolate(x, size=[(int)(x.shape[2] / 2), (int)(x.shape[3] / 2)], mode='bilinear', align_corners=True)
 
-        x1 = self.coarsenet(x)
+        x1 = self.coarsenet(x, text_feat)
         newinput_merged = (x1 * masks) + (x0 * (1 - masks))
 
         channel1mask=masks[:,0,:,:]

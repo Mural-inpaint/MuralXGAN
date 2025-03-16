@@ -11,6 +11,7 @@ import torch
 import random
 import numpy as np
 import torchvision.transforms.functional as F
+import yaml
 from torch.utils.data import DataLoader
 from PIL import Image
 # from scipy.misc import imread
@@ -18,20 +19,25 @@ from imageio import imread
 from skimage.feature import canny
 from skimage.color import rgb2gray, gray2rgb
 from .utils import create_mask
+from sentence_transformers import SentenceTransformer
 
 
 class Dataset(torch.utils.data.Dataset):
-    def __init__(self, config, flist, edge_flist, mask_flist, augment=True, training=True):
+    def __init__(self, config, flist, mask_flist, caption, model=None, augment=True, training=True):
         super(Dataset, self).__init__()
         self.augment = augment
         self.training = training
         self.data = self.load_flist(flist)
-        self.edge_data = self.load_flist(edge_flist)
         self.mask_data = self.load_flist(mask_flist)
+        self.caption_data = self.load_caption(caption)
+        if model is None:
+            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            self.model = SentenceTransformer('clip-ViT-B-32').to(device)
+        else:
+            self.model = model
 
         self.input_size = config.INPUT_SIZE
         self.sigma = config.SIGMA
-        self.edge = config.EDGE
         self.mask = config.MASK
         self.nms = config.NMS
         self.mode=config.MODE
@@ -58,13 +64,10 @@ class Dataset(torch.utils.data.Dataset):
         return os.path.basename(name)
 
     def load_item(self, index):
-
         size = self.input_size
 
         # load image
         img = imread(self.data[index])
-        # load edge
-        edge = self.load_edge(img, index)
 
         if(self.mode==1):
             # random crop
@@ -74,16 +77,12 @@ class Dataset(torch.utils.data.Dataset):
                 nh = random.randint(0, pad)
                 nw = random.randint(0, pad)
                 img = img[nh:nh + length, nw:nw + length]
-                edge = edge[nh:nh + length, nw:nw + length]
 
 
         if(img.shape[0]==img.shape[1]):
             img = cv2.resize(img, (size, size), interpolation=cv2.INTER_AREA)
-            edge = cv2.resize(edge, (size, size), interpolation=cv2.INTER_AREA)
-
         # else:
         #     img = cv2.resize(img, (int(img.shape[0]) , int(img.shape[1])), interpolation=cv2.INTER_AREA)
-
 
        # gray to rgb
         if len(img.shape) < 3:
@@ -100,48 +99,21 @@ class Dataset(torch.utils.data.Dataset):
         # load mask
         mask = self.load_mask(img, index)
 
+        if mask.shape == (512, 512, 3):
+            mask = rgb2gray(mask)
+
+        caption = self.caption_data[index] if index < len(self.caption_data) else "No caption available"
+        with torch.no_grad():
+            text_feat = self.model.encode(caption, convert_to_tensor=True)
+            text_feat = text_feat / text_feat.norm(dim=-1, keepdim=True)
 
         # augment data
         if self.augment and np.random.binomial(1, 0.5) > 0:
             img = img[:, ::-1, ...]
             img_gray = img_gray[:, ::-1, ...]
-            edge = edge[:, ::-1, ...]
             mask = mask[:, ::-1, ...]
 
-        return self.to_tensor(img), self.to_tensor(img_gray), self.to_tensor(edge), self.to_tensor(mask)
-
-    def load_edge(self, img, index):
-        sigma = self.sigma
-
-        # in test mode images are masked (with masked regions),
-        # using 'mask' parameter prevents canny to detect edges for the masked regions
-        # mask = None if self.training else (1 - mask / 255).astype(np.bool)
-
-        # canny
-        # if self.edge == 1:
-            # # no edge
-            # if sigma == -1:
-            #     return np.zeros(img.shape).astype(np.float)
-            #
-            # # random sigma
-            # if sigma == 0:
-            #     sigma = random.randint(1, 4)
-            #
-            # return canny(img, sigma=sigma, mask=mask).astype(np.float)
-
-        # external
-        # else:
-        imgh, imgw = img.shape[0:2]
-        edge = imread(self.edge_data[index])
-        edge = rgb2gray(edge)
-        edge = 1 - edge
-        edge = self.resize(edge, imgh, imgw)
-
-            # non-max suppression
-            # if self.nms == 1:
-            #     edge = edge * canny(img, sigma=sigma, mask=mask)
-
-        return edge
+        return self.to_tensor(img), self.to_tensor(img_gray), self.to_tensor(mask), text_feat
 
     def load_mask(self, img, index):
         imgh, imgw = img.shape[0:2]
@@ -180,6 +152,18 @@ class Dataset(torch.utils.data.Dataset):
             mask = (mask > 0).astype(np.uint8) * 255
             return mask
 
+    def load_caption(self, caption_path):
+        if not isinstance(caption_path, str) or not caption_path.endswith('.yml'):
+            raise ValueError("Caption file should be a valid YAML file path.")
+
+        with open(caption_path, 'r', encoding='utf-8') as file:
+            captions_dict = yaml.safe_load(file)
+
+        captions_list = list(captions_dict.values())
+
+        print(f"Captions loaded: {len(captions_list)} captions.")
+        return captions_list
+
     def to_tensor(self, img):
         img = Image.fromarray(img)
         # img = img.copy()
@@ -217,7 +201,7 @@ class Dataset(torch.utils.data.Dataset):
 
             if os.path.isfile(flist):
                 try:
-                    return np.genfromtxt(flist, dtype=np.str, encoding='utf-8')
+                    return np.genfromtxt(flist, dtype=str, encoding='utf-8')
                 except:
                     return [flist]
 

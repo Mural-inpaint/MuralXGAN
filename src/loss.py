@@ -4,7 +4,8 @@
 
 import torch
 import torch.nn as nn
-import torchvision.models as models
+from torchvision import models
+from torchvision.models import VGG19_Weights
 import cv2
 import numpy as np
 import torch.nn.functional as F
@@ -119,7 +120,7 @@ class PerceptualLoss(nn.Module):
 class VGG19(torch.nn.Module):
     def __init__(self):
         super(VGG19, self).__init__()
-        features = models.vgg19(pretrained=True).features
+        features = models.vgg19(weights=VGG19_Weights.IMAGENET1K_V1).features
         self.relu1_1 = torch.nn.Sequential()
         self.relu1_2 = torch.nn.Sequential()
 
@@ -253,7 +254,8 @@ class HistogramLoss(nn.Module):
         max_value=torch.max(torch.cat((torch.max(source, 1).values,torch.max(template,1).values),dim=0),0)
         min_value=torch.min(torch.cat((torch.min(source, 1).values,torch.min(template,1).values),dim=0),0)
 
-        hist_delta = (max_value.values - min_value.values) / hist_bins
+        epsilon = 1e-6
+        hist_delta = (max_value.values - min_value.values) / hist_bins + epsilon
         hist_range = torch.range(min_value.values.squeeze(0).data, max_value.values.squeeze(0).data, step=hist_delta.data).to("cuda")
         hist_range = torch.add(hist_range, torch.div(hist_delta, 2))
         s_hist=torch.histc(source,hist_bins,min_value.values.squeeze(0).data,max_value.values.squeeze(0).data)
