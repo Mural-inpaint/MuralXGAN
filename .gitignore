@@ -8,3 +8,4 @@ checkpoints/config.yml
 checkpoints/model_sota/
 checkpoints/model_muralxgan/
 .env
+
