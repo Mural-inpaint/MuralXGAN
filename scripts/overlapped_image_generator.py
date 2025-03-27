@@ -30,12 +30,12 @@ def overlay_mask_on_image(original_path, mask_path, color=(255, 0, 0), alpha=180
     return composite_rgb
 
 # Example usage
-config_path = "../checkpoints/config.yml"
+config_path = "checkpoints/config.yml"
 with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 
-image_flist_path = config.get("TRAIN_FLIST")
-mask_flist_path = config.get("TRAIN_MASK_FLIST")
+image_flist_path = config.get("TEST_FLIST")
+mask_flist_path = config.get("TEST_MASK_FLIST")
 
 with open(image_flist_path, "r") as f:
     image_paths = [line.strip() for line in f.readlines()]
@@ -46,7 +46,7 @@ with open(mask_flist_path, "r") as f:
 if len(image_paths) != len(mask_paths):
     print("Warning: Image and mask file lists have different lengths!")
 
-output_dir = "/mnt/d/Edinburgh/MLP/MuralDH/Mural_overlay"
+output_dir = "/mnt/d/Edinburgh/MLP/MuralDH/test-dataset-jingyang/test_dataset"
 os.makedirs(output_dir, exist_ok=True)
 
 for image_path, mask_path in zip(image_paths, mask_paths):

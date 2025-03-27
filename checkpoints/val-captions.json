@@ -1,0 +1,2436 @@
+{
+    "000000.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "black"
+        ],
+        "position": "upper left and bottom center",
+        "description": "The shedding is concentrated on the upper left and bottom center, affecting the figure's outline and the vegetation.",
+        "picture_name": "000000.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, black. The shedding is concentrated on the upper left and bottom center, affecting the figure's outline and the vegetation."
+    },
+    "000021.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, predominantly affecting the green background.",
+        "picture_name": "000021.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the upper left area, predominantly affecting the green background."
+    },
+    "000024.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right quadrant, affecting the green background and some details of the figure.",
+        "picture_name": "000024.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the upper right quadrant, affecting the green background and some details of the figure."
+    },
+    "000036.png": {
+        "damage_type": "discoloration",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "turquoise"
+        ],
+        "position": "center right",
+        "description": "The discoloration is evident around the architectural structure's base, affecting intricate patterns.",
+        "picture_name": "000036.png",
+        "full_text": "Damage type: discoloration. Severity: moderate. Affected colors: brown, turquoise. The discoloration is evident around the architectural structure's base, affecting intricate patterns."
+    },
+    "000048.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left section, affecting the background and architectural elements.",
+        "picture_name": "000048.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated on the upper left section, affecting the background and architectural elements."
+    },
+    "000055.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center right",
+        "description": "The shedding is concentrated on the center right, affecting the pole and surrounding area.",
+        "picture_name": "000055.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated on the center right, affecting the pole and surrounding area."
+    },
+    "000056.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "aqua",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left, affecting the cloud patterns and architectural details.",
+        "picture_name": "000056.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: aqua, brown. The shedding is concentrated on the upper left, affecting the cloud patterns and architectural details."
+    },
+    "000062.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the architectural patterns.",
+        "picture_name": "000062.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated on the upper left corner, affecting the architectural patterns."
+    },
+    "000076.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is located in the upper left corner, noticeable on the background foliage.",
+        "picture_name": "000076.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is located in the upper left corner, noticeable on the background foliage."
+    },
+    "000078.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "red"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the robe of the sitting figure.",
+        "picture_name": "000078.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, red. The shedding is concentrated in the upper center, affecting the robe of the sitting figure."
+    },
+    "000081.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The fading is concentrated on the upper left corner, affecting the sky and surrounding foliage elements.",
+        "picture_name": "000081.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: green, blue. The fading is concentrated on the upper left corner, affecting the sky and surrounding foliage elements."
+    },
+    "000087.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "center left",
+        "description": "The shedding is prominent in the center left region, affecting the garment and nearby background.",
+        "picture_name": "000087.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, beige. The shedding is prominent in the center left region, affecting the garment and nearby background."
+    },
+    "000090.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "lower section",
+        "description": "The shedding is concentrated in the lower section of the mural, affecting the area surrounding a central figure.",
+        "picture_name": "000090.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, beige. The shedding is concentrated in the lower section of the mural, affecting the area surrounding a central figure."
+    },
+    "000091.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "blue",
+            "tan"
+        ],
+        "position": "bottom",
+        "description": "The shedding is concentrated at the bottom of the mural, affecting the landscape and figure details.",
+        "picture_name": "000091.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, blue, tan. The shedding is concentrated at the bottom of the mural, affecting the landscape and figure details."
+    },
+    "000099.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "white"
+        ],
+        "position": "lower right",
+        "description": "The shedding is concentrated on the lower right part of the mural, affecting the garment and surrounding areas.",
+        "picture_name": "000099.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, white. The shedding is concentrated on the lower right part of the mural, affecting the garment and surrounding areas."
+    },
+    "000100.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is focused on the upper left area, affecting the headdress and halo.",
+        "picture_name": "000100.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is focused on the upper left area, affecting the headdress and halo."
+    },
+    "000103.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "middle",
+        "description": "The shedding is spread across the middle section, affecting the robe and ornaments with green and brown colors.",
+        "picture_name": "000103.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is spread across the middle section, affecting the robe and ornaments with green and brown colors."
+    },
+    "000104.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "black"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the central area, affecting the figure's robe and chest.",
+        "picture_name": "000104.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, black. The shedding is concentrated in the central area, affecting the figure's robe and chest."
+    },
+    "000106.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is primarily located in the center, affecting the figure's robe.",
+        "picture_name": "000106.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown. The shedding is primarily located in the center, affecting the figure's robe."
+    },
+    "000110.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "orange",
+            "tan"
+        ],
+        "position": "lower left",
+        "description": "The shedding is concentrated on the lower left area, affecting the leg of the horse.",
+        "picture_name": "000110.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, orange, tan. The shedding is concentrated on the lower left area, affecting the leg of the horse."
+    },
+    "000115.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "aqua",
+            "brown",
+            "red"
+        ],
+        "position": "various",
+        "description": "The shedding is scattered throughout the mural, affecting the figures' robes and surrounding areas.",
+        "picture_name": "000115.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: aqua, brown, red. The shedding is scattered throughout the mural, affecting the figures' robes and surrounding areas."
+    },
+    "000123.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "center",
+        "description": "The fading is concentrated in the center area within the green patterns, reducing the vibrancy of the color.",
+        "picture_name": "000123.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: green. The fading is concentrated in the center area within the green patterns, reducing the vibrancy of the color."
+    },
+    "000125.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left region, affecting the leaves of the foliage.",
+        "picture_name": "000125.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the upper left region, affecting the leaves of the foliage."
+    },
+    "000130.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper center",
+        "description": "The fading is noticeable in the upper center area, affecting the pyramid and surrounding water details.",
+        "picture_name": "000130.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: green, brown. The fading is noticeable in the upper center area, affecting the pyramid and surrounding water details."
+    },
+    "000131.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "tan"
+        ],
+        "position": "center and lower areas",
+        "description": "The shedding is concentrated in the central and lower areas, primarily affecting the figure and the architectural structure.",
+        "picture_name": "000131.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, tan. The shedding is concentrated in the central and lower areas, primarily affecting the figure and the architectural structure."
+    },
+    "000136.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "various regions, predominantly in the upper and lower sections",
+        "description": "The shedding affects several areas, notably in the upper and lower sections, including the figure and surrounding foliage.",
+        "picture_name": "000136.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding affects several areas, notably in the upper and lower sections, including the figure and surrounding foliage."
+    },
+    "000137.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated around the plant area, affecting the green leaves.",
+        "picture_name": "000137.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated around the plant area, affecting the green leaves."
+    },
+    "000138.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "green",
+            "yellow"
+        ],
+        "position": "bottom and upper right",
+        "description": "The shedding is extensive at the bottom and affects some upper right sections, particularly impacting the foliage.",
+        "picture_name": "000138.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: green, yellow. The shedding is extensive at the bottom and affects some upper right sections, particularly impacting the foliage."
+    },
+    "000142.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "black"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the table and surrounding area.",
+        "picture_name": "000142.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, black. The shedding is concentrated in the center, affecting the table and surrounding area."
+    },
+    "000146.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "central left",
+        "description": "The shedding is concentrated on the central left, affecting the foliage and branches.",
+        "picture_name": "000146.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: green. The shedding is concentrated on the central left, affecting the foliage and branches."
+    },
+    "000159.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the green area of the figure's robe.",
+        "picture_name": "000159.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the upper right corner, affecting the green area of the figure's robe."
+    },
+    "000162.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "black",
+            "purple"
+        ],
+        "position": "central",
+        "description": "The shedding is concentrated in the central area, affecting the robe and background of the figure.",
+        "picture_name": "000162.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, black, purple. The shedding is concentrated in the central area, affecting the robe and background of the figure."
+    },
+    "000166.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "black",
+            "brown"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left area, affecting the background and section surrounding a standing figure.",
+        "picture_name": "000166.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: black, brown. The shedding is concentrated on the center left area, affecting the background and section surrounding a standing figure."
+    },
+    "000168.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "skin tones",
+            "red",
+            "brown",
+            "green"
+        ],
+        "position": "central",
+        "description": "The shedding is concentrated around the heads and upper bodies of the figures, affecting their robes and facial areas.",
+        "picture_name": "000168.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: skin tones, red, brown, green. The shedding is concentrated around the heads and upper bodies of the figures, affecting their robes and facial areas."
+    },
+    "000173.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "middle left",
+        "description": "The shedding is concentrated on the middle left area, affecting the green background.",
+        "picture_name": "000173.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the middle left area, affecting the green background."
+    },
+    "000202.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the background and cloak area.",
+        "picture_name": "000202.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated on the upper left corner, affecting the background and cloak area."
+    },
+    "000210.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "red",
+            "green"
+        ],
+        "position": "center left",
+        "description": "The shedding is present on the center left of the mural, impacting the ornamental design and the figure's attire.",
+        "picture_name": "000210.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, red, green. The shedding is present on the center left of the mural, impacting the ornamental design and the figure's attire."
+    },
+    "000211.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "white"
+        ],
+        "position": "lower area",
+        "description": "The shedding is concentrated in the lower area, affecting the cloud and the decorative elements.",
+        "picture_name": "000211.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, white. The shedding is concentrated in the lower area, affecting the cloud and the decorative elements."
+    },
+    "000213.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "cream",
+            "black"
+        ],
+        "position": "lower center",
+        "description": "The shedding is concentrated in the lower center, affecting decorative patterns and background elements.",
+        "picture_name": "000213.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, cream, black. The shedding is concentrated in the lower center, affecting decorative patterns and background elements."
+    },
+    "000216.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The fading is concentrated around the central area, affecting the background and part of the furniture.",
+        "picture_name": "000216.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: green, brown. The fading is concentrated around the central area, affecting the background and part of the furniture."
+    },
+    "000217.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding affects the central area, particularly on the figures' robes and the table.",
+        "picture_name": "000217.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding affects the central area, particularly on the figures' robes and the table."
+    },
+    "000218.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "black"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting the figures' clothing and surrounding area.",
+        "picture_name": "000218.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, black. The shedding is concentrated on the upper center, affecting the figures' clothing and surrounding area."
+    },
+    "000219.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the figures and surrounding areas.",
+        "picture_name": "000219.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: green, brown. The shedding is concentrated in the center, affecting the figures and surrounding areas."
+    },
+    "000223.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "center right",
+        "description": "The damage involves shedding of paint primarily in the center right portion, affecting the decorative elements and robe details.",
+        "picture_name": "000223.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The damage involves shedding of paint primarily in the center right portion, affecting the decorative elements and robe details."
+    },
+    "000225.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "white",
+            "blue",
+            "orange"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the central area, affecting the details of the dragon-like creature.",
+        "picture_name": "000225.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: white, blue, orange. The shedding is concentrated in the central area, affecting the details of the dragon-like creature."
+    },
+    "000233.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "cream",
+            "brown"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right side, affecting the surrounding area of the deity's halo.",
+        "picture_name": "000233.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: cream, brown. The shedding is concentrated on the upper right side, affecting the surrounding area of the deity's halo."
+    },
+    "000238.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated in the upper left corner, affecting the decorative background elements.",
+        "picture_name": "000238.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the upper left corner, affecting the decorative background elements."
+    },
+    "000240.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated in the upper left corner, affecting the green and blue sections surrounding the figures.",
+        "picture_name": "000240.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is concentrated in the upper left corner, affecting the green and blue sections surrounding the figures."
+    },
+    "000247.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right section, affecting the garment's colors.",
+        "picture_name": "000247.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is concentrated on the upper right section, affecting the garment's colors."
+    },
+    "000248.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown",
+            "green"
+        ],
+        "position": "left center",
+        "description": "The shedding is concentrated on the left center, affecting the ornate designs.",
+        "picture_name": "000248.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown, green. The shedding is concentrated on the left center, affecting the ornate designs."
+    },
+    "000253.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right, affecting the background and parts of the robe.",
+        "picture_name": "000253.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the upper right, affecting the background and parts of the robe."
+    },
+    "000262.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "white"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting multiple parts of the figures, including the green background and brown garments.",
+        "picture_name": "000262.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, white. The shedding is concentrated on the upper center, affecting multiple parts of the figures, including the green background and brown garments."
+    },
+    "000263.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "lower left",
+        "description": "The shedding is concentrated on the lower left corner, affecting the swirling patterns.",
+        "picture_name": "000263.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is concentrated on the lower left corner, affecting the swirling patterns."
+    },
+    "000283.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the arch and surrounding areas.",
+        "picture_name": "000283.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, beige. The shedding is concentrated on the upper left corner, affecting the arch and surrounding areas."
+    },
+    "000287.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper",
+        "description": "The shedding is concentrated in the upper region, affecting the deity's head and the background area.",
+        "picture_name": "000287.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, green. The shedding is concentrated in the upper region, affecting the deity's head and the background area."
+    },
+    "000290.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "orange",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the garment of the figure.",
+        "picture_name": "000290.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, orange, brown. The shedding is concentrated on the upper left corner, affecting the garment of the figure."
+    },
+    "000293.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "black"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated on the figure's face and hands, affecting the central part of the mural.",
+        "picture_name": "000293.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, black. The shedding is concentrated on the figure's face and hands, affecting the central part of the mural."
+    },
+    "000294.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "central",
+        "description": "The shedding is prominent on the central figure and surrounding area, affecting the figure's attire and the lotus base.",
+        "picture_name": "000294.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is prominent on the central figure and surrounding area, affecting the figure's attire and the lotus base."
+    },
+    "000298.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "green",
+            "brown",
+            "beige"
+        ],
+        "position": "center and lower right",
+        "description": "The shedding is concentrated in the center and lower right areas, affecting the mural's plant and decorative elements.",
+        "picture_name": "000298.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: green, brown, beige. The shedding is concentrated in the center and lower right areas, affecting the mural's plant and decorative elements."
+    },
+    "000303.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "lower center",
+        "description": "The shedding is observed in the lower center, particularly affecting the fabric and decorative elements.",
+        "picture_name": "000303.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: green, beige. The shedding is observed in the lower center, particularly affecting the fabric and decorative elements."
+    },
+    "000321.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right section, affecting the decorative patterns behind the figure.",
+        "picture_name": "000321.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the upper right section, affecting the decorative patterns behind the figure."
+    },
+    "000371.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the figure's adornments and background.",
+        "picture_name": "000371.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated on the upper left area, affecting the figure's adornments and background."
+    },
+    "000397.png": {
+        "damage_type": "discoloration",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The discoloration is located in the upper left corner, affecting the green background area.",
+        "picture_name": "000397.png",
+        "full_text": "Damage type: discoloration. Severity: moderate. Affected colors: green, beige. The discoloration is located in the upper left corner, affecting the green background area."
+    },
+    "000400.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the green wavy lines and surrounding areas.",
+        "picture_name": "000400.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, beige. The shedding is concentrated on the upper right corner, affecting the green wavy lines and surrounding areas."
+    },
+    "000406.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the clothing and details around the central figure's arm.",
+        "picture_name": "000406.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the center, affecting the clothing and details around the central figure's arm."
+    },
+    "000415.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "turquoise",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left side, affecting the decorative patterns and background areas.",
+        "picture_name": "000415.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: turquoise, brown. The shedding is concentrated on the upper left side, affecting the decorative patterns and background areas."
+    },
+    "000418.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the decorative patterns.",
+        "picture_name": "000418.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated in the upper center, affecting the decorative patterns."
+    },
+    "000421.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center area, affecting the headdress and background.",
+        "picture_name": "000421.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated in the center area, affecting the headdress and background."
+    },
+    "000436.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "tan",
+            "gold"
+        ],
+        "position": "upper right",
+        "description": "Shedding is noticeable in the upper right, affecting areas near the headdress and halo.",
+        "picture_name": "000436.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, tan, gold. Shedding is noticeable in the upper right, affecting areas near the headdress and halo."
+    },
+    "000438.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the ornate circular patterns.",
+        "picture_name": "000438.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the upper left area, affecting the ornate circular patterns."
+    },
+    "000448.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated near the center, affecting the ornate patterns and background elements.",
+        "picture_name": "000448.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated near the center, affecting the ornate patterns and background elements."
+    },
+    "000459.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper and middle sections",
+        "description": "The shedding affects multiple areas across the upper and middle sections, impacting the figures' faces and robes.",
+        "picture_name": "000459.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding affects multiple areas across the upper and middle sections, impacting the figures' faces and robes."
+    },
+    "000462.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "left center",
+        "description": "The shedding is concentrated in the left center, affecting the figure's ornaments and background.",
+        "picture_name": "000462.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated in the left center, affecting the figure's ornaments and background."
+    },
+    "000466.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "lower right",
+        "description": "The shedding is concentrated on the lower right corner, affecting the area beneath the chin.",
+        "picture_name": "000466.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the lower right corner, affecting the area beneath the chin."
+    },
+    "000483.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the face, predominantly affecting the cheek and mouth area.",
+        "picture_name": "000483.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the face, predominantly affecting the cheek and mouth area."
+    },
+    "000485.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "yellow"
+        ],
+        "position": "upper left",
+        "description": "The fading is primarily in the upper left corner, affecting the background and some parts of the figure's hair.",
+        "picture_name": "000485.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: green, yellow. The fading is primarily in the upper left corner, affecting the background and some parts of the figure's hair."
+    },
+    "000487.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "bottom right",
+        "description": "The shedding is concentrated on the bottom right corner, affecting the green robe of the figure.",
+        "picture_name": "000487.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the bottom right corner, affecting the green robe of the figure."
+    },
+    "000503.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "black",
+            "green"
+        ],
+        "position": "bottom center",
+        "description": "The shedding is concentrated at the bottom center, affecting the swirl patterns in the design.",
+        "picture_name": "000503.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: black, green. The shedding is concentrated at the bottom center, affecting the swirl patterns in the design."
+    },
+    "000504.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "black",
+            "yellow"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the circular pattern and surrounding areas.",
+        "picture_name": "000504.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: black, yellow. The shedding is concentrated in the center, affecting the circular pattern and surrounding areas."
+    },
+    "000539.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right side, affecting the ornate clothing and detailing of the figure.",
+        "picture_name": "000539.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated on the upper right side, affecting the ornate clothing and detailing of the figure."
+    },
+    "000540.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "white"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the figures' clothing and halos in the mural.",
+        "picture_name": "000540.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, white. The shedding is concentrated in the upper center, affecting the figures' clothing and halos in the mural."
+    },
+    "000563.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "blue",
+            "white"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the arch and decorative elements.",
+        "picture_name": "000563.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, blue, white. The shedding is concentrated on the upper left area, affecting the arch and decorative elements."
+    },
+    "000569.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "beige",
+            "brown",
+            "blue"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting the central figure's head and surrounding areas.",
+        "picture_name": "000569.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: beige, brown, blue. The shedding is concentrated on the upper center, affecting the central figure's head and surrounding areas."
+    },
+    "000570.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the decorative patterns and upper figures.",
+        "picture_name": "000570.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: green, brown. The shedding is concentrated on the upper left corner, affecting the decorative patterns and upper figures."
+    },
+    "000573.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "cream"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the headdress and face of the figure.",
+        "picture_name": "000573.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, cream. The shedding is concentrated on the upper left corner, affecting the headdress and face of the figure."
+    },
+    "000574.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "beige",
+            "aqua"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the central area, affecting the swirling patterns and figures.",
+        "picture_name": "000574.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: beige, aqua. The shedding is concentrated in the central area, affecting the swirling patterns and figures."
+    },
+    "000577.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "beige",
+            "blue",
+            "green"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the central left area, affecting multiple figures and background patterns.",
+        "picture_name": "000577.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: beige, blue, green. The shedding is concentrated on the central left area, affecting multiple figures and background patterns."
+    },
+    "000578.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "turquoise"
+        ],
+        "position": "upper right",
+        "description": "The shedding is visible in the upper right area affecting the robes and surrounding decorative elements.",
+        "picture_name": "000578.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, turquoise. The shedding is visible in the upper right area affecting the robes and surrounding decorative elements."
+    },
+    "000590.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "white"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the garment and background details.",
+        "picture_name": "000590.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, white. The shedding is concentrated in the center, affecting the garment and background details."
+    },
+    "000592.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "tan"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left, affecting the background and surrounding elements.",
+        "picture_name": "000592.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, tan. The shedding is concentrated on the upper left, affecting the background and surrounding elements."
+    },
+    "000601.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "beige",
+            "blue",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center region, affecting the figures' faces and surrounding motifs.",
+        "picture_name": "000601.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: beige, blue, brown. The shedding is concentrated in the center region, affecting the figures' faces and surrounding motifs."
+    },
+    "000602.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "beige",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the decorative border and upper figures.",
+        "picture_name": "000602.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, beige, brown. The shedding is concentrated on the upper left corner, affecting the decorative border and upper figures."
+    },
+    "000608.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the decorative elements and patterns.",
+        "picture_name": "000608.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated on the upper left corner, affecting the decorative elements and patterns."
+    },
+    "000618.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "beige"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the background and decorative elements.",
+        "picture_name": "000618.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, beige. The shedding is concentrated in the upper center, affecting the background and decorative elements."
+    },
+    "000619.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "yellow",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left, affecting the blue and yellow sections, likely part of the garment.",
+        "picture_name": "000619.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, yellow, brown. The shedding is concentrated on the upper left, affecting the blue and yellow sections, likely part of the garment."
+    },
+    "000628.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "beige",
+            "brown"
+        ],
+        "position": "central",
+        "description": "The shedding is concentrated in the central area of the mural, affecting the figure's robe and surrounding decorations.",
+        "picture_name": "000628.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: beige, brown. The shedding is concentrated in the central area of the mural, affecting the figure's robe and surrounding decorations."
+    },
+    "000643.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "left center",
+        "description": "The shedding is focused on the left center, impacting the green and blue areas of the mural.",
+        "picture_name": "000643.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is focused on the left center, impacting the green and blue areas of the mural."
+    },
+    "000656.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left area, affecting the two figures depicted in the mural.",
+        "picture_name": "000656.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the center left area, affecting the two figures depicted in the mural."
+    },
+    "000667.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "cream",
+            "green"
+        ],
+        "position": "center and lower right",
+        "description": "The shedding is noticeable near the figure's arm and across the floral designs in the center and lower right.",
+        "picture_name": "000667.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: cream, green. The shedding is noticeable near the figure's arm and across the floral designs in the center and lower right."
+    },
+    "000679.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper middle",
+        "description": "The shedding is concentrated in the upper middle section, affecting the background and parts of the architectural details.",
+        "picture_name": "000679.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the upper middle section, affecting the background and parts of the architectural details."
+    },
+    "000684.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "tan"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the surface texture.",
+        "picture_name": "000684.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, tan. The shedding is concentrated on the upper left area, affecting the surface texture."
+    },
+    "000688.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left, affecting the intricate designs.",
+        "picture_name": "000688.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown, beige. The shedding is concentrated on the upper left, affecting the intricate designs."
+    },
+    "000690.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "beige",
+            "blue"
+        ],
+        "position": "central",
+        "description": "The shedding is concentrated in the central area, affecting the background textures.",
+        "picture_name": "000690.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: beige, blue. The shedding is concentrated in the central area, affecting the background textures."
+    },
+    "000694.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "green"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting the area around the central figure.",
+        "picture_name": "000694.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, green. The shedding is concentrated on the upper center, affecting the area around the central figure."
+    },
+    "000697.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "right edge",
+        "description": "The shedding is concentrated along the right edge, affecting architectural details and figures.",
+        "picture_name": "000697.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is concentrated along the right edge, affecting architectural details and figures."
+    },
+    "000715.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "turquoise",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is seen in the center of the image, affecting some of the ornate turquoise patterns and brown background.",
+        "picture_name": "000715.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: turquoise, brown. The shedding is seen in the center of the image, affecting some of the ornate turquoise patterns and brown background."
+    },
+    "000761.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "black"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, affecting the figure's outline and robe.",
+        "picture_name": "000761.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, black. The shedding is concentrated on the upper left corner, affecting the figure's outline and robe."
+    },
+    "000762.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left, affecting the green area of the painting.",
+        "picture_name": "000762.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the center left, affecting the green area of the painting."
+    },
+    "000766.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "upper center",
+        "description": "The shedding is scattered across the upper center area, primarily affecting the blue and brown sections of the sky and mountains.",
+        "picture_name": "000766.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: blue, brown. The shedding is scattered across the upper center area, primarily affecting the blue and brown sections of the sky and mountains."
+    },
+    "000770.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "green",
+            "orange"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the deity's figure and surrounding elements.",
+        "picture_name": "000770.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, green, orange. The shedding is concentrated in the upper center, affecting the deity's figure and surrounding elements."
+    },
+    "000771.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "center",
+        "description": "The shedding is spread across the center, affecting the robes and background elements.",
+        "picture_name": "000771.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is spread across the center, affecting the robes and background elements."
+    },
+    "000772.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "left center",
+        "description": "The shedding is concentrated on the left center, affecting parts of the background and some figures.",
+        "picture_name": "000772.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated on the left center, affecting parts of the background and some figures."
+    },
+    "000774.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown",
+            "white"
+        ],
+        "position": "upper left and center",
+        "description": "The shedding is primarily located in the upper left and center areas, affecting the figures' halos and faces.",
+        "picture_name": "000774.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown, white. The shedding is primarily located in the upper left and center areas, affecting the figures' halos and faces."
+    },
+    "000775.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "white"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center area, affecting the figures' faces and garments.",
+        "picture_name": "000775.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, white. The shedding is concentrated in the center area, affecting the figures' faces and garments."
+    },
+    "000776.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the background and some detailing around the deity.",
+        "picture_name": "000776.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, beige. The shedding is concentrated on the upper right corner, affecting the background and some detailing around the deity."
+    },
+    "000777.png": {
+        "damage_type": "discoloration",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "top center",
+        "description": "The discoloration is focused on the top center, affecting the background area around the deity's halo.",
+        "picture_name": "000777.png",
+        "full_text": "Damage type: discoloration. Severity: moderate. Affected colors: green, brown. The discoloration is focused on the top center, affecting the background area around the deity's halo."
+    },
+    "000779.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center left",
+        "description": "The shedding is mostly visible on the robe and part of the seat area, affecting the blue and brown sections.",
+        "picture_name": "000779.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is mostly visible on the robe and part of the seat area, affecting the blue and brown sections."
+    },
+    "000781.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "central",
+        "description": "The shedding is noticeable around the central figures, particularly affecting their garments and the background.",
+        "picture_name": "000781.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is noticeable around the central figures, particularly affecting their garments and the background."
+    },
+    "000782.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is focused around the central brown structure, with visible loss of detail in the surrounding blue background.",
+        "picture_name": "000782.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is focused around the central brown structure, with visible loss of detail in the surrounding blue background."
+    },
+    "000784.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "cream",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated around the figure's head and robe, affecting intricate details.",
+        "picture_name": "000784.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: cream, brown. The shedding is concentrated around the figure's head and robe, affecting intricate details."
+    },
+    "000795.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "tan"
+        ],
+        "position": "center right",
+        "description": "The shedding is mostly in the center right, affecting the robe and book of the kneeling figure.",
+        "picture_name": "000795.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, tan. The shedding is mostly in the center right, affecting the robe and book of the kneeling figure."
+    },
+    "000802.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "cream"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left corner, impacting the floral patterns and arm of the figure.",
+        "picture_name": "000802.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, cream. The shedding is concentrated on the upper left corner, impacting the floral patterns and arm of the figure."
+    },
+    "000829.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper middle",
+        "description": "The shedding is concentrated around the roof of the structure, affecting the green and brown areas.",
+        "picture_name": "000829.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated around the roof of the structure, affecting the green and brown areas."
+    },
+    "000835.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "tan"
+        ],
+        "position": "right",
+        "description": "The shedding is evident on the right side, primarily affecting the brown area of the figure's robe and the surrounding background.",
+        "picture_name": "000835.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, tan. The shedding is evident on the right side, primarily affecting the brown area of the figure's robe and the surrounding background."
+    },
+    "000846.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "center left",
+        "description": "The shedding is primarily located in the center left area, affecting the garment's drapery.",
+        "picture_name": "000846.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is primarily located in the center left area, affecting the garment's drapery."
+    },
+    "000854.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "black",
+            "brown"
+        ],
+        "position": "left",
+        "description": "The shedding is concentrated on the left side, affecting the floral border pattern.",
+        "picture_name": "000854.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: black, brown. The shedding is concentrated on the left side, affecting the floral border pattern."
+    },
+    "000857.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right, affecting the intricate circular designs and parts of the deity's robe.",
+        "picture_name": "000857.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the upper right, affecting the intricate circular designs and parts of the deity's robe."
+    },
+    "000861.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center left",
+        "description": "The shedding is primarily in the center left section, affecting the decorative patterns.",
+        "picture_name": "000861.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is primarily in the center left section, affecting the decorative patterns."
+    },
+    "000888.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left of the mural, affecting the robe and background.",
+        "picture_name": "000888.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated on the center left of the mural, affecting the robe and background."
+    },
+    "000893.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "beige"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center area, primarily affecting the green and brown sections of the mural.",
+        "picture_name": "000893.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, beige. The shedding is concentrated in the upper center area, primarily affecting the green and brown sections of the mural."
+    },
+    "000900.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "blue",
+            "black"
+        ],
+        "position": "lower left",
+        "description": "The shedding is concentrated on the lower left, affecting the edge of the bird's neck and surrounding area.",
+        "picture_name": "000900.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: blue, black. The shedding is concentrated on the lower left, affecting the edge of the bird's neck and surrounding area."
+    },
+    "000919.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "black"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the figure's garment and surrounding area.",
+        "picture_name": "000919.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, black. The shedding is concentrated in the upper center, affecting the figure's garment and surrounding area."
+    },
+    "000920.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "central upper",
+        "description": "The shedding is affecting the area around the heads and hands of the figures, causing noticeable loss of detail.",
+        "picture_name": "000920.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is affecting the area around the heads and hands of the figures, causing noticeable loss of detail."
+    },
+    "000921.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left, affecting the green halo and surrounding area.",
+        "picture_name": "000921.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the center left, affecting the green halo and surrounding area."
+    },
+    "000922.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "red"
+        ],
+        "position": "left edge",
+        "description": "The shedding is concentrated along the left edge, affecting the ornamental patterns.",
+        "picture_name": "000922.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, red. The shedding is concentrated along the left edge, affecting the ornamental patterns."
+    },
+    "000929.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right area, affecting the ornamental patterns.",
+        "picture_name": "000929.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the upper right area, affecting the ornamental patterns."
+    },
+    "000931.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center area, affecting the details on the garment and nearby decorations.",
+        "picture_name": "000931.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the center area, affecting the details on the garment and nearby decorations."
+    },
+    "000947.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "green",
+            "gold"
+        ],
+        "position": "various",
+        "description": "Shedding is visible in scattered areas, primarily affecting small sections of the green and gold hues around the deities.",
+        "picture_name": "000947.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: green, gold. Shedding is visible in scattered areas, primarily affecting small sections of the green and gold hues around the deities."
+    },
+    "000950.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "left center",
+        "description": "The shedding is concentrated on the left center, affecting the garment folds and nearby background.",
+        "picture_name": "000950.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the left center, affecting the garment folds and nearby background."
+    },
+    "000965.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "beige"
+        ],
+        "position": "center",
+        "description": "The shedding is noticeable in the central area, particularly affecting the swirling pattern and surrounding colors.",
+        "picture_name": "000965.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, beige. The shedding is noticeable in the central area, particularly affecting the swirling pattern and surrounding colors."
+    },
+    "000970.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "orange",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, notably affecting the robes and surrounding areas.",
+        "picture_name": "000970.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: orange, brown. The shedding is concentrated in the center, notably affecting the robes and surrounding areas."
+    },
+    "000973.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "center right",
+        "description": "The shedding is concentrated in the center right area, affecting the head and surrounding design.",
+        "picture_name": "000973.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated in the center right area, affecting the head and surrounding design."
+    },
+    "000984.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated in the upper left corner, affecting the background and figures.",
+        "picture_name": "000984.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the upper left corner, affecting the background and figures."
+    },
+    "001002.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "beige"
+        ],
+        "position": "upper left and lower center",
+        "description": "The shedding is concentrated in the upper left and lower center areas, affecting the sky and ground sections.",
+        "picture_name": "001002.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, beige. The shedding is concentrated in the upper left and lower center areas, affecting the sky and ground sections."
+    },
+    "001004.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "lower center",
+        "description": "The shedding is concentrated on the lower center, affecting the roof structure.",
+        "picture_name": "001004.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the lower center, affecting the roof structure."
+    },
+    "001006.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting the structure's beams and surrounding area.",
+        "picture_name": "001006.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the upper center, affecting the structure's beams and surrounding area."
+    },
+    "001009.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "orange",
+            "white"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center area affecting the circular patterns and lines.",
+        "picture_name": "001009.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: orange, white. The shedding is concentrated in the center area affecting the circular patterns and lines."
+    },
+    "001010.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "orange",
+            "brown"
+        ],
+        "position": "center and upper right",
+        "description": "The shedding is present in the center and upper right areas, primarily affecting the figure's garment and surroundings.",
+        "picture_name": "001010.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: orange, brown. The shedding is present in the center and upper right areas, primarily affecting the figure's garment and surroundings."
+    },
+    "001018.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "tan"
+        ],
+        "position": "left",
+        "description": "The shedding is concentrated on the left side, affecting the blue and tan areas of the mural.",
+        "picture_name": "001018.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, tan. The shedding is concentrated on the left side, affecting the blue and tan areas of the mural."
+    },
+    "001039.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "blue",
+            "turquoise"
+        ],
+        "position": "lower area",
+        "description": "The shedding is visible in the lower area of the mural, mainly affecting the flowing garments and patterned sections.",
+        "picture_name": "001039.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: blue, turquoise. The shedding is visible in the lower area of the mural, mainly affecting the flowing garments and patterned sections."
+    },
+    "001045.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "yellow",
+            "blue"
+        ],
+        "position": "center",
+        "description": "The shedding is primarily in the center, affecting the blue and green areas, with some yellow sections.",
+        "picture_name": "001045.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, yellow, blue. The shedding is primarily in the center, affecting the blue and green areas, with some yellow sections."
+    },
+    "001046.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "center right",
+        "description": "The shedding is concentrated on the center right area, affecting the tree and surrounding foliage.",
+        "picture_name": "001046.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated on the center right area, affecting the tree and surrounding foliage."
+    },
+    "001058.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the figures and their garments.",
+        "picture_name": "001058.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated in the center, affecting the figures and their garments."
+    },
+    "001061.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding occurs primarily in the upper left region, impacting the architectural elements and figures.",
+        "picture_name": "001061.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding occurs primarily in the upper left region, impacting the architectural elements and figures."
+    },
+    "001062.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "central left",
+        "description": "The shedding is concentrated in the central left region, affecting the detailed figures and background.",
+        "picture_name": "001062.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated in the central left region, affecting the detailed figures and background."
+    },
+    "001072.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the intricate designs and background patterns.",
+        "picture_name": "001072.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated on the upper right corner, affecting the intricate designs and background patterns."
+    },
+    "001074.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center left to lower right",
+        "description": "The shedding is spread from the center left to the lower right, primarily affecting the background colors.",
+        "picture_name": "001074.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is spread from the center left to the lower right, primarily affecting the background colors."
+    },
+    "001080.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "turquoise"
+        ],
+        "position": "lower right",
+        "description": "The shedding is concentrated on the lower right area, affecting the garment and background elements.",
+        "picture_name": "001080.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, turquoise. The shedding is concentrated on the lower right area, affecting the garment and background elements."
+    },
+    "001091.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "bottom left",
+        "description": "The shedding is concentrated on the bottom left corner, affecting the ground and lower elements.",
+        "picture_name": "001091.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: brown, green. The shedding is concentrated on the bottom left corner, affecting the ground and lower elements."
+    },
+    "001095.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "center",
+        "description": "The shedding is prominent in the central area, especially around the figures seated in circular formations.",
+        "picture_name": "001095.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is prominent in the central area, especially around the figures seated in circular formations."
+    },
+    "001102.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "blue"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated in the upper right area of the mural, affecting the intricate patterns and designs.",
+        "picture_name": "001102.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, blue. The shedding is concentrated in the upper right area of the mural, affecting the intricate patterns and designs."
+    },
+    "001107.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "turquoise"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the figures' clothing and decorations.",
+        "picture_name": "001107.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, turquoise. The shedding is concentrated on the upper right corner, affecting the figures' clothing and decorations."
+    },
+    "001111.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "orange",
+            "black"
+        ],
+        "position": "upper right and middle right",
+        "description": "The shedding is visible in the upper right and middle right, affecting the structures and figures.",
+        "picture_name": "001111.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: orange, black. The shedding is visible in the upper right and middle right, affecting the structures and figures."
+    },
+    "001114.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "upper middle",
+        "description": "The shedding affects the central figure, mostly impacting the middle section of the robe and the surrounding area.",
+        "picture_name": "001114.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding affects the central figure, mostly impacting the middle section of the robe and the surrounding area."
+    },
+    "001115.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "turquoise",
+            "brown"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the turquoise area of the robes.",
+        "picture_name": "001115.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: turquoise, brown. The shedding is concentrated in the upper center, affecting the turquoise area of the robes."
+    },
+    "001139.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center left",
+        "description": "The shedding is concentrated on the center left, affecting the robes and architectural elements.",
+        "picture_name": "001139.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated on the center left, affecting the robes and architectural elements."
+    },
+    "001146.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "tan",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center region, affecting the figures' heads and halos.",
+        "picture_name": "001146.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: tan, brown. The shedding is concentrated in the center region, affecting the figures' heads and halos."
+    },
+    "001154.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green"
+        ],
+        "position": "middle right",
+        "description": "The shedding is concentrated on the middle right section, affecting the green background adjacent to the architectural elements.",
+        "picture_name": "001154.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green. The shedding is concentrated on the middle right section, affecting the green background adjacent to the architectural elements."
+    },
+    "001167.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "middle right",
+        "description": "The shedding is concentrated in the middle right area, affecting the background and part of the figure's attire.",
+        "picture_name": "001167.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the middle right area, affecting the background and part of the figure's attire."
+    },
+    "001169.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "bottom center",
+        "description": "The shedding is visible along the bottom center edge, affecting the base of the patterns and designs.",
+        "picture_name": "001169.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is visible along the bottom center edge, affecting the base of the patterns and designs."
+    },
+    "001180.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "white"
+        ],
+        "position": "center",
+        "description": "The shedding is scattered across the center of the mural, affecting various figures and their clothing.",
+        "picture_name": "001180.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, white. The shedding is scattered across the center of the mural, affecting various figures and their clothing."
+    },
+    "001183.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "white",
+            "brown"
+        ],
+        "position": "various regions",
+        "description": "The shedding is dispersed across various regions, primarily affecting the green and white areas of the mural, with noticeable impact on the figures' robes and background.",
+        "picture_name": "001183.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, white, brown. The shedding is dispersed across various regions, primarily affecting the green and white areas of the mural, with noticeable impact on the figures' robes and background."
+    },
+    "001187.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown",
+            "beige"
+        ],
+        "position": "center and lower region",
+        "description": "The shedding is concentrated on the central area of the image and lower region, affecting portions of the clothing and background.",
+        "picture_name": "001187.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown, beige. The shedding is concentrated on the central area of the image and lower region, affecting portions of the clothing and background."
+    },
+    "001188.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "black"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the person's face and garments.",
+        "picture_name": "001188.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, black. The shedding is concentrated in the center, affecting the person's face and garments."
+    },
+    "001190.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "black"
+        ],
+        "position": "lower left",
+        "description": "The shedding is concentrated on the lower left area, affecting the base structure in the image.",
+        "picture_name": "001190.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, black. The shedding is concentrated on the lower left area, affecting the base structure in the image."
+    },
+    "001197.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "top right",
+        "description": "The shedding is mild and concentrated on the top right edge of the mural, affecting the border and nearby figures.",
+        "picture_name": "001197.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: brown, green. The shedding is mild and concentrated on the top right edge of the mural, affecting the border and nearby figures."
+    },
+    "001201.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center area, mainly affecting the central figure's headdress and surrounding design.",
+        "picture_name": "001201.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding is concentrated in the center area, mainly affecting the central figure's headdress and surrounding design."
+    },
+    "001207.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "brown"
+        ],
+        "position": "upper center and right",
+        "description": "The shedding occurs across the upper center and right areas, notably affecting the garments and surrounding environment of the figures.",
+        "picture_name": "001207.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, brown. The shedding occurs across the upper center and right areas, notably affecting the garments and surrounding environment of the figures."
+    },
+    "001209.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "green"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the sky and foliage.",
+        "picture_name": "001209.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, green. The shedding is concentrated on the upper left area, affecting the sky and foliage."
+    },
+    "001215.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "pink"
+        ],
+        "position": "bottom right",
+        "description": "The shedding is concentrated in the bottom right area, affecting the floral design at the deity's feet.",
+        "picture_name": "001215.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, pink. The shedding is concentrated in the bottom right area, affecting the floral design at the deity's feet."
+    },
+    "img_1158crop_1_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green",
+            "red"
+        ],
+        "position": "right center",
+        "description": "The shedding is concentrated on the right center, affecting the ornamental and patterned area.",
+        "picture_name": "img_1158crop_1_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green, red. The shedding is concentrated on the right center, affecting the ornamental and patterned area."
+    },
+    "img_1158crop_1_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "green"
+        ],
+        "position": "lower right",
+        "description": "The shedding is concentrated on the lower right edge, affecting the ornate border pattern.",
+        "picture_name": "img_1158crop_1_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, green. The shedding is concentrated on the lower right edge, affecting the ornate border pattern."
+    },
+    "img_1159crop_1_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "yellow",
+            "white"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left, affecting the floral patterns and parts of the figure's attire.",
+        "picture_name": "img_1159crop_1_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, yellow, white. The shedding is concentrated on the upper left, affecting the floral patterns and parts of the figure's attire."
+    },
+    "img_1161crop_1_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "green",
+            "beige"
+        ],
+        "position": "top center",
+        "description": "The shedding is located at the top center, affecting the pattern along the border.",
+        "picture_name": "img_1161crop_1_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: green, beige. The shedding is located at the top center, affecting the pattern along the border."
+    },
+    "img_1165crop_1_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "tan"
+        ],
+        "position": "center right",
+        "description": "The shedding is mostly occurring in the center right area, particularly affecting the architectural elements and the fabric designs.",
+        "picture_name": "img_1165crop_1_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, tan. The shedding is mostly occurring in the center right area, particularly affecting the architectural elements and the fabric designs."
+    },
+    "img_713crop_0_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "brown"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated in the upper center, affecting the blue and brown colors in the decorative elements.",
+        "picture_name": "img_713crop_0_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, brown. The shedding is concentrated in the upper center, affecting the blue and brown colors in the decorative elements."
+    },
+    "img_713crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "blue"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the background and robe of the figure.",
+        "picture_name": "img_713crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, blue. The shedding is concentrated on the upper right corner, affecting the background and robe of the figure."
+    },
+    "img_714crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "white",
+            "black"
+        ],
+        "position": "upper center",
+        "description": "The shedding is concentrated on the upper center, affecting the figures' outlines and background.",
+        "picture_name": "img_714crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: white, black. The shedding is concentrated on the upper center, affecting the figures' outlines and background."
+    },
+    "img_715crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "black",
+            "white"
+        ],
+        "position": "central",
+        "description": "The shedding is concentrated in the central area, affecting the main figure's head and surrounding designs.",
+        "picture_name": "img_715crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: black, white. The shedding is concentrated in the central area, affecting the main figure's head and surrounding designs."
+    },
+    "img_719crop_0_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "cream"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the face and halo of the figure.",
+        "picture_name": "img_719crop_0_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, cream. The shedding is concentrated in the center, affecting the face and halo of the figure."
+    },
+    "img_719crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "black"
+        ],
+        "position": "middle left",
+        "description": "The shedding is concentrated on the middle left section, affecting the dark areas and blue patterns.",
+        "picture_name": "img_719crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: blue, black. The shedding is concentrated on the middle left section, affecting the dark areas and blue patterns."
+    },
+    "img_720crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "blue",
+            "tan"
+        ],
+        "position": "upper edge",
+        "description": "The shedding is along the upper edge of the mural, affecting the blue and tan areas.",
+        "picture_name": "img_720crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: blue, tan. The shedding is along the upper edge of the mural, affecting the blue and tan areas."
+    },
+    "img_725crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "mild",
+        "colors_affected": [
+            "black",
+            "brown"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated around the upper left, mainly affecting the figure's hair and surrounding lines.",
+        "picture_name": "img_725crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: mild. Affected colors: black, brown. The shedding is concentrated around the upper left, mainly affecting the figure's hair and surrounding lines."
+    },
+    "img_728crop_0_0.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "blue",
+            "gray"
+        ],
+        "position": "upper left",
+        "description": "The fading is noticeable in the upper left portion, affecting the blue and gray areas around the figure\u2019s hair and cloak.",
+        "picture_name": "img_728crop_0_0.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: blue, gray. The fading is noticeable in the upper left portion, affecting the blue and gray areas around the figure\u2019s hair and cloak."
+    },
+    "img_728crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "gray",
+            "blue"
+        ],
+        "position": "center",
+        "description": "The shedding is concentrated in the center, affecting the blue and gray areas of the mural.",
+        "picture_name": "img_728crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: gray, blue. The shedding is concentrated in the center, affecting the blue and gray areas of the mural."
+    },
+    "img_728crop_1_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "gray",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the robe of the figure.",
+        "picture_name": "img_728crop_1_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: gray, beige. The shedding is concentrated on the upper left area, affecting the robe of the figure."
+    },
+    "img_728crop_1_1.png": {
+        "damage_type": "fading",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "gray",
+            "blue"
+        ],
+        "position": "upper left",
+        "description": "The fading is concentrated on the upper left area, affecting the figure's garment and surrounding background.",
+        "picture_name": "img_728crop_1_1.png",
+        "full_text": "Damage type: fading. Severity: moderate. Affected colors: gray, blue. The fading is concentrated on the upper left area, affecting the figure's garment and surrounding background."
+    },
+    "img_743crop_0_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "severe",
+        "colors_affected": [
+            "brown",
+            "white"
+        ],
+        "position": "upper right",
+        "description": "The shedding is concentrated on the upper right corner, affecting the figure and background.",
+        "picture_name": "img_743crop_0_0.png",
+        "full_text": "Damage type: shedding. Severity: severe. Affected colors: brown, white. The shedding is concentrated on the upper right corner, affecting the figure and background."
+    },
+    "img_743crop_0_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "upper left",
+        "description": "The shedding is concentrated on the upper left area, affecting the background and part of the figure's head.",
+        "picture_name": "img_743crop_0_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is concentrated on the upper left area, affecting the background and part of the figure's head."
+    },
+    "img_743crop_1_0.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "black",
+            "brown"
+        ],
+        "position": "center right",
+        "description": "The shedding is concentrated on the center right, affecting the garment and background.",
+        "picture_name": "img_743crop_1_0.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: black, brown. The shedding is concentrated on the center right, affecting the garment and background."
+    },
+    "img_743crop_1_1.png": {
+        "damage_type": "shedding",
+        "damage_severity": "moderate",
+        "colors_affected": [
+            "brown",
+            "beige"
+        ],
+        "position": "lower left",
+        "description": "The shedding is visible on the lower left, predominantly affecting the figure's legs and garment.",
+        "picture_name": "img_743crop_1_1.png",
+        "full_text": "Damage type: shedding. Severity: moderate. Affected colors: brown, beige. The shedding is visible on the lower left, predominantly affecting the figure's legs and garment."
+    }
+}

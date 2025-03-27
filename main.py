@@ -79,7 +79,6 @@ def load_config(mode=None):
     parser.add_argument('--model',default=2, type=int, choices=[2],)
     parser.add_argument('--input', type=str,default='./checkpoints/test/input', help='path to the input images directory or an input image')
     parser.add_argument('--mask', type=str,default='./checkpoints/test/mask',help='path to the masks directory or a mask file')
-    parser.add_argument('--edge', type=str,default='./checkpoints/test/edge',help='path to the edges directory or an edge file')
     parser.add_argument('--merged_output', type=str,default='./checkpoints/test/merged_output', help='path to the output directory')
     # parser.add_argument('--output', type=str, default='./checkpoints/test/output', help='path to the output directory')
 
@@ -109,20 +108,25 @@ def load_config(mode=None):
         config.MODEL = args.model if args.model is not None else 3
         config.INPUT_SIZE = 512
 
-        if args.input is not None:
-            config.TEST_FLIST = args.input
+        config.TEST_FLIST = config.TEST_FLIST
+        config.TEST_MASK_FLIST = config.TEST_MASK_FLIST
+        config.TEST_CAPTIONS = config.TEST_CAPTIONS
+        config.RESULTS = args.merged_output
 
-        if args.mask is not None:
-            config.TEST_MASK_FLIST = args.mask
-
-        if args.edge is not None:
-            config.TEST_EDGE_FLIST = args.edge
+        # if args.input is not None:
+        #     config.TEST_FLIST = args.input
+        #
+        # if args.mask is not None:
+        #     config.TEST_MASK_FLIST = args.mask
+        #
+        # if args.edge is not None:
+        #     config.TEST_EDGE_FLIST = args.edge
         #
         # if args.output is not None:
         #     config.RESULTS_ORI = args.output
 
-        if args.merged_output is not None:
-            config.RESULTS = args.merged_output
+        # if args.merged_output is not None:
+        #     config.RESULTS = args.merged_output
 
     # eval mode
     elif mode == 3:
