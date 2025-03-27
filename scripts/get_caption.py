@@ -66,18 +66,18 @@ config_path = "../checkpoints/config.yml"
 with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 
-flist_path = config.get("TRAIN_OVERLAY_FLIST")
+flist_path = config.get("TEST_OVERLAY_FLIST")
 with open(flist_path, "r") as f:
     image_paths = [line.strip() for line in f.readlines()]
 
-caption_save_path = "../checkpoints/captions.yml"
+caption_save_path = "../checkpoints/test/test-captions.yml"
 if os.path.exists(caption_save_path):
     with open(caption_save_path, "r") as f:
         captions = yaml.safe_load(f) or {}
 else:
     captions = {}
 
-json_save_path = "../checkpoints/captions.json"
+json_save_path = "../checkpoints/test/test-captions.json"
 if os.path.exists(json_save_path):
     with open(json_save_path, "r") as f:
         try:

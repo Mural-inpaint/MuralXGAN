@@ -99,6 +99,7 @@ class InpaintingModel(BaseModel):
         # refineDiscriminator=Discriminator(in_channels=3, use_sigmoid=config.GAN_LOSS != 'hinge')
 
         l1_loss = nn.L1Loss()
+        l2_loss = nn.MSELoss()
         perceptual_loss = PerceptualLoss()
         style_loss = StyleLoss()
         histogram_loss=HistogramLoss()
@@ -106,7 +107,8 @@ class InpaintingModel(BaseModel):
 
 
         if len(config.GPU) > 1:
-            l1_loss = nn.DataParallel(l1_loss, config.GPU)
+            # l1_loss = nn.DataParallel(l1_loss, config.GPU)
+            l2_loss = nn.DataParallel(l2_loss, config.GPU)
             perceptual_loss = nn.DataParallel(perceptual_loss , config.GPU)
             style_loss = nn.DataParallel(style_loss, config.GPU)
             histogram_loss = nn.DataParallel(histogram_loss, config.GPU)
@@ -117,7 +119,8 @@ class InpaintingModel(BaseModel):
         # self.add_module('refinediscriminator', refineDiscriminator)
 
         self.add_module('vgg', VGG19())
-        self.add_module('l1_loss', l1_loss)
+        # self.add_module('l1_loss', l1_loss)
+        self.add_module('mse_loss', l2_loss)
         self.add_module('perceptual_loss', perceptual_loss)
         self.add_module('style_loss', style_loss)
         self.add_module('histogram_loss', histogram_loss)
@@ -176,37 +179,43 @@ class InpaintingModel(BaseModel):
             gen_loss += gen_loss
 
             # generator l1 loss
-            gen_l1_loss = self.l1_loss(outputs1, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
-            gen_loss += gen_l1_loss
+            # gen_l1_loss = self.l1_loss(outputs1, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
+            # gen_loss += gen_l1_loss
+
+            # generator l2 loss
+            gen_l2_loss = self.l2_loss(outputs1, images) * self.config.L2_LOSS_WEIGHT / torch.mean(masks)
+            gen_loss += gen_l2_loss
 
             # generator perceptual loss
             gen_content_loss = self.perceptual_loss(outputs1, images)* self.config.CONTENT_LOSS_WEIGHT
             gen_loss += gen_content_loss
 
             # generator style loss
-            # gen_style_loss = self.style_loss(outputs1, images )* self.config.STYLE_LOSS_WEIGHT
-            # gen_loss += gen_style_loss
+            gen_style_loss = self.style_loss(outputs1, images )* self.config.STYLE_LOSS_WEIGHT
+            gen_loss += gen_style_loss
 
             # create logs
             if len(self.GPU) > 1:
                 dis_loss = torch.mean(dis_loss)
                 gen_gan_loss = torch.mean(gen_gan_loss)
-                gen_l1_loss = torch.mean(gen_l1_loss)
+                # gen_l1_loss = torch.mean(gen_l1_loss)
+                gen_l2_loss = torch.mean(gen_l2_loss)
                 gen_content_loss = torch.mean(gen_content_loss)
-                # gen_style_loss = torch.mean(gen_style_loss)
+                gen_style_loss = torch.mean(gen_style_loss)
                 gen_loss = torch.mean(gen_loss)
 
             logs = [
                 ("l_d2", dis_loss.item()),
                 ("l_g2", gen_gan_loss.item()),
-                ("l_l1", gen_l1_loss.item()),
+                # ("l_l1", gen_l1_loss.item()),
+                ("l_l2", gen_l2_loss.item()),
                 ("l_per", gen_content_loss.item()),
-                # ("l_sty", gen_style_loss.item()),
+                ("l_sty", gen_style_loss.item()),
             ]
             # generator histgramloss
-            # gen_hist_loss = self.histogram_loss(outputs1*255, images*255)* self.config.HIST_LOSS_WEIGHT
-            # gen_loss += gen_hist_loss
-            # gen_hist_loss=0
+            gen_hist_loss = self.histogram_loss(outputs1*255, images*255)* self.config.HIST_LOSS_WEIGHT
+            gen_loss += gen_hist_loss
+            gen_hist_loss = 0
 
         else:
             msk = masks[:, 0, :, :]
@@ -240,13 +249,17 @@ class InpaintingModel(BaseModel):
             gen_loss += gen_gan_loss
 
             # generator l1 loss
-            gen_l1_loss_1 = self.l1_loss(outputs1, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
-            gen_l1_loss_2 = self.l1_loss(outputs2_merged, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
-
+            # gen_l1_loss_1 = self.l1_loss(outputs1, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
             # gen_l1_loss_2 = self.l1_loss(outputs2_merged, images) * self.config.L1_LOSS_WEIGHT / torch.mean(masks)
 
-            gen_l1_loss = (gen_l1_loss_1 + gen_l1_loss_2) / 2
-            gen_loss += gen_l1_loss
+            # gen_l1_loss = (gen_l1_loss_1 + gen_l1_loss_2) / 2
+            # gen_loss += gen_l1_loss
+
+            # generator l2 loss
+            gen_l2_loss_1 = self.l2_loss(outputs1, images) * self.config.L2_LOSS_WEIGHT / torch.mean(masks)
+            gen_l2_loss_2 = self.l2_loss(outputs2_merged, images) * self.config.L2_LOSS_WEIGHT / torch.mean(masks)
+            gen_l2_loss = (gen_l2_loss_1 + gen_l2_loss_2) / 2
+            gen_loss += gen_l2_loss
 
             # generator perceptual loss
             gen_content_loss_1 = self.perceptual_loss(outputs1, images)
@@ -274,7 +287,8 @@ class InpaintingModel(BaseModel):
             if len(self.GPU) > 1:
                 dis_loss = torch.mean(dis_loss)
                 gen_gan_loss = torch.mean(gen_gan_loss)
-                gen_l1_loss = torch.mean(gen_l1_loss)
+                # gen_l1_loss = torch.mean(gen_l1_loss)
+                gen_l2_loss = torch.mean(gen_l2_loss)
                 gen_content_loss = torch.mean(gen_content_loss)
                 gen_style_loss = torch.mean(gen_style_loss)
                 gen_hist_loss = torch.mean(gen_hist_loss)
@@ -283,7 +297,8 @@ class InpaintingModel(BaseModel):
             logs = [
                 ("l_d2", dis_loss.item()),
                 ("l_g2", gen_gan_loss.item()),
-                ("l_l1", gen_l1_loss.item()),
+                # ("l_l1", gen_l1_loss.item()),
+                ("l_l2", gen_l2_loss.item()),
                 ("l_per", gen_content_loss.item()),
                 ("l_sty", gen_style_loss.item()),
                 ("l_hist", gen_hist_loss.item()),

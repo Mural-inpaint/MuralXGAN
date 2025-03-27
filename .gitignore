@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 data/
 checkpoints/test/
+checkpoints/config.yml
+model_sota/
+.env

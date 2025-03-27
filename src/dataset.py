@@ -40,7 +40,7 @@ class Dataset(torch.utils.data.Dataset):
         self.sigma = config.SIGMA
         self.mask = config.MASK
         self.nms = config.NMS
-        self.mode=config.MODE
+        self.mode = config.MODE
 
         # in test mode, there's a one-to-one relationship between mask and image
         # masks are loaded non random
