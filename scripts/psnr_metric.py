@@ -51,7 +51,6 @@ psnr_metric = PSNR(255.0).to("cuda")
 psnr = psnr_metric(postprocess(images), postprocess(outputs_merged))
 mae = (torch.sum(torch.abs(images - outputs_merged)) / torch.sum(images)).float()
 
-# 计算SSIM (注意：SSIM期望输入范围为[0, 1])
 ssim_metric = SSIM().to("cuda")
 ssim = ssim_metric(images, outputs_merged)
 
